@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const LoginForm = () => {
   return (
-    <div className="mt-5 h-[80vh] w-full bg-[#0f0f0f] flex items-center justify-center px-6">
+    <div className="mt-5 h-[80vh] w-full  flex items-center justify-center px-2 lg:px-6 ">
       <div className="w-full max-w-sm">
         {/* Logo */}
         {/* Logo */}
