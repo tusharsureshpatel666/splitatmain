@@ -81,7 +81,7 @@ const AppointmentPage = () => {
                 {/* Status */}
                 <div className="flex justify-between items-center">
                   <Skeleton className="h-4 w-16" />
-                  <Skeleton className="h-7 w-20 rounded-full" />
+                  <Skeleton className="h-7 w-20 rounded-md" />
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@ const AppointmentPage = () => {
                   <span className="text-gray-500">Status</span>
 
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                    className={`px-3 py-1 rounded-md text-xs font-semibold ${
                       appointment.status === "APPROVED"
                         ? "bg-green-100 text-green-700"
                         : appointment.status === "PENDING"

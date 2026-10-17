@@ -22,7 +22,7 @@ const ProfileHeader = () => {
                         h-28 w-28 
                         lg:h-36 lg:w-36 
                         overflow-hidden 
-                        rounded-full 
+                        rounded-md 
                         bg-gray-200 
                         shrink-0"
         >

@@ -100,7 +100,7 @@ export default function SharingType({
                   key={day}
                   className="text-sm bg-white dark:bg-gray-800 
                              text-gray-800 dark:text-gray-200
-                             px-3 py-1 rounded-full 
+                             px-3 py-1 rounded-md 
                              border border-green-300 dark:border-green-700 
                              font-medium"
                 >

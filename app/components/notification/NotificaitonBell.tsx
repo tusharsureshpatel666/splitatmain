@@ -26,7 +26,7 @@ export default function NotificationBell() {
       <Button
         variant={"secondary"}
         onClick={() => setOpen((prev) => !prev)}
-        className="relative rounded-full"
+        className="relative rounded-md"
       >
         <HiBell className="h-6 w-6 text-gray-700 dark:text-white" />
 
@@ -34,7 +34,7 @@ export default function NotificationBell() {
           <motion.span
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 rounded-full"
+            className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 rounded-md"
           >
             {count}
           </motion.span>

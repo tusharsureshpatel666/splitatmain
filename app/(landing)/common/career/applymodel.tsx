@@ -56,7 +56,7 @@ export default function ApplyModal({
               <Button
                 type="submit"
                 disabled={!file}
-                className="w-full rounded-full font-semibold"
+                className="w-full rounded-md font-semibold"
               >
                 Submit Application
               </Button>

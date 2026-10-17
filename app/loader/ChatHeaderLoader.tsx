@@ -4,7 +4,7 @@ export function ChatHeaderSkeleton() {
   return (
     <div className="flex items-center gap-3 border-b px-4 py-3 bg-white dark:bg-black">
       {/* Avatar skeleton */}
-      <Skeleton className="h-11 w-11 rounded-full" />
+      <Skeleton className="h-11 w-11 rounded-md" />
 
       <div className="flex flex-col gap-2">
         {/* Name skeleton */}

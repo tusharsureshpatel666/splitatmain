@@ -24,7 +24,7 @@ const Footer = () => {
             <Link
               href="https://www.instagram.com/Splitat.official/"
               aria-label="Instagram"
-              className="rounded-full border border-gray-300 p-2 text-gray-600 transition hover:bg-gray-100 hover:text-black dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+              className="rounded-md border border-gray-300 p-2 text-gray-600 transition hover:bg-gray-100 hover:text-black dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
               <Instagram size={18} />
             </Link>
@@ -32,7 +32,7 @@ const Footer = () => {
             <Link
               href="https://x.com/Splitat_offical"
               aria-label="Twitter"
-              className="rounded-full border border-gray-300 p-2 text-gray-600 transition hover:bg-gray-100 hover:text-black dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+              className="rounded-md border border-gray-300 p-2 text-gray-600 transition hover:bg-gray-100 hover:text-black dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
               <Twitter size={18} />
             </Link>
@@ -40,7 +40,7 @@ const Footer = () => {
             <Link
               href="https://www.youtube.com/@tysontyler4861"
               aria-label="Facebook"
-              className="rounded-full border border-gray-300 p-2 text-gray-600 transition hover:bg-gray-100 hover:text-black dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+              className="rounded-md border border-gray-300 p-2 text-gray-600 transition hover:bg-gray-100 hover:text-black dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
             >
               <Youtube size={18} />
             </Link>

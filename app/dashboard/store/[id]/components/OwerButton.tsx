@@ -43,7 +43,7 @@ const OwnerButton = ({ image, name, createAt }: Props) => {
           alt={name}
           width={40}
           height={40}
-          className="rounded-full"
+          className="rounded-md"
         />
       </Avatar>
 

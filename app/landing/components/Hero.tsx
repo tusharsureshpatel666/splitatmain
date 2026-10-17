@@ -1,107 +1,105 @@
 "use client";
 
 import Image from "next/image";
-import { Home, MapPin, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+
+import Link from "next/link";
+const stats = [
+  { value: "200+", label: "Happy Customers" },
+  { value: "10k+", label: "Properties For Clients" },
+  { value: "16+", label: "Years of Experience" },
+];
 
 export default function Hero() {
-  const router = useRouter();
-  const { theme } = useTheme();
-
-  // ✅ Prevent hydration mismatch
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // 👇 fallback image BEFORE theme loads
-  const imageSrc = mounted
-    ? theme === "dark"
-      ? "/helo.webp"
-      : "/dark1.webp"
-    : "/dark1.webp"; // default
-
-  // ✅ Only ONE image source
-
   return (
-    <section className="w-full bg-white dark:bg-transparent">
-      <div className="mx-auto justify-center flex max-w-7xl flex-col items-center gap-10 md:px-6 py-16 lg:flex-row">
-        {/* LEFT CONTENT */}
-        <div className="order-1 w-full space-y-6 lg:order-1 lg:w-1/2">
-          <p className="flex items-center gap-2 text-sm text-gray-600">
-            <MapPin size={16} />
-            Delhi NCR, IN
-          </p>
+    <section className="relative isolate min-h-[480px] w-full overflow-hidden  text-white">
+      {/* Subtle background pattern */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-30"
+      />
 
-          <h1 className="text-2xl font-semibold leading-snug text-black dark:text-gray-50 sm:text-5xl">
-            Connect with Store Partners with Splitat
-          </h1>
+      <div className="mx-auto grid min-h-[480px]  grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]">
+        {/* Left content */}
+        <div className="relative z-10 flex flex-col justify-center px-6 py-14 sm:px-10 lg:px-16 lg:py-12">
+          <div className="">
+            <p className="mb-5 text-xs font-medium uppercase tracking-[0.25em] text-violet-400">
+              Find your perfect space
+            </p>
 
-          <div className="flex gap-4">
-            <Button
-              variant="outline"
-              size={"lg"}
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium text-black dark:text-white"
-              onClick={() => router.push("/dashboard")}
-            >
-              <Search size={16} />
-              Search Partner
-            </Button>
+            <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight sm:text-5xl">
+              Discover Your Dream Property with{" "}
+              <span className="text-white">Estatein</span>
+            </h1>
 
-            <Button
-              size={"lg"}
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium"
-              onClick={() => router.push("/dashboard")}
-            >
-              <Home size={16} />
-              Add Your Store
-            </Button>
+            <p className="mt-5 max-w-[470px] text-sm leading-6 text-neutral-400">
+              Your journey to finding the perfect property begins here. Explore
+              our listings to find the home that matches your dreams.
+            </p>
+
+            {/* CTA buttons */}
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <Link
+                href="/about"
+                className="rounded-md border border-white/10 px-5 py-3 text-xs font-medium transition hover:border-white/30 hover:bg-white/5"
+              >
+                Learn More
+              </Link>
+
+              <Link
+                href="/properties"
+                className="rounded-md bg-violet-600 px-5 py-3 text-xs font-medium shadow-lg shadow-violet-600/20 transition hover:bg-violet-500"
+              >
+                Browse Properties
+              </Link>
+            </div>
+
+            {/* Statistics */}
+            <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-3">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-lg border border-white/[0.07] bg-white/[0.035] p-3 sm:p-4"
+                >
+                  <p className="text-xl font-semibold tracking-tight sm:text-2xl">
+                    {stat.value}
+                  </p>
+                  <p className="mt-2 text-[10px] leading-4 text-neutral-400 sm:text-xs">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-
-          <p className="text-sm text-gray-500">
-            * Splitat connects users with verified store partners and enables
-            businesses to list, manage, and grow their stores efficiently.
-          </p>
         </div>
 
-        {/* RIGHT IMAGE */}
-        <div className="order-2 w-full lg:order-2 lg:w-1/2">
-          <div className="relative overflow-hidden rounded-3xl">
-            {/* ✅ Single Optimized Image */}
-            <Image
-              src={imageSrc}
-              alt="Hero illustration"
-              width={600}
-              height={600}
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="
-                w-full object-cover
-                h-[500px]
-                sm:h-[500px]
-                md:h-[600px]
-                lg:h-full
-              "
-            />
+        {/* Right architectural visual */}
+        <div className="relative min-h-[320px] overflow-hidden bg-[#17151f] lg:min-h-full">
+          {/* Purple glow */}
+          <div className="absolute inset-0 bg-gradient-to-br from-violet-950/30 via-transparent to-violet-900/20" />
 
-            {/* Floating Card */}
-            <div className="absolute bottom-6 left-1/2 w-[90%] -translate-x-1/2 rounded-2xl bg-gradient-to-r from-red-700 to-red-500 p-4 text-white shadow-lg">
-              <div className="flex items-center justify-between">
-                <p className="font-medium text-xs md:text-sm">
-                  Search Partner Now?
-                </p>
-                <button
-                  onClick={() => router.push("/dashboard")}
-                  className="cursor-pointer text-xs rounded-full bg-white dark:bg-white px-4 py-2 md:text-sm font-semibold text-black"
-                >
-                  Schedule ahead
-                </button>
-              </div>
-            </div>
+          <Image
+            src={"/logo.svg"}
+            alt="Modern glass commercial buildings"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center opacity-80"
+          />
+
+          {/* Blend image into dark design */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#101010]/70 via-transparent to-violet-950/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#101010]/40 via-transparent to-black/10" />
+
+          {/* Circular badge */}
+
+          {/* Bottom caption */}
+          <div className="absolute bottom-6 left-6 right-6 z-10 sm:bottom-8 sm:left-8">
+            <p className="text-xs uppercase tracking-[0.3em] text-white/60">
+              Spaces that inspire
+            </p>
+            <p className="mt-2 text-lg font-medium sm:text-xl">
+              Find a place to call yours.
+            </p>
           </div>
         </div>
       </div>

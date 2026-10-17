@@ -112,15 +112,13 @@ const FootfallListAlso = ({ lat, log }) => {
 
   return (
     <div className="p-4 md:p-6    flex items-center justify-center">
-        
       {/* 🔥 MAIN CARD */}
       <div className="bg-white dark:bg-[#111] rounded-3xl p-6 md:p-10 border border-gray-200 dark:border-gray-800 shadow-sm max-w-2xl w-full text-center">
         {loading ? (
           <div className="h-40 animate-pulse bg-gray-200 rounded-2xl" />
         ) : (
           <>
-
-          <IoFootsteps/>
+            <IoFootsteps />
             {/* 🔹 Title */}
             <p className="text-sm uppercase tracking-wider text-gray-500 mb-3">
               Footfall Score
@@ -137,16 +135,16 @@ const FootfallListAlso = ({ lat, log }) => {
             {/* 🔹 Badge */}
             <div className="mt-4 flex justify-center">
               <span
-                className={`px-4 py-1.5 rounded-full text-sm font-medium ${meta.bg} ${meta.color}`}
+                className={`px-4 py-1.5 rounded-md text-sm font-medium ${meta.bg} ${meta.color}`}
               >
                 {meta.label}
               </span>
             </div>
 
             {/* 🔹 Progress Bar */}
-            <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden mt-6">
+            <div className="w-full h-3 bg-gray-200 rounded-md overflow-hidden mt-6">
               <div
-                className={`h-3 rounded-full transition-all duration-700 ${meta.bar}`}
+                className={`h-3 rounded-md transition-all duration-700 ${meta.bar}`}
                 style={{ width: `${footfallScore}%` }}
               />
             </div>

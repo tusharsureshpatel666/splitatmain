@@ -15,7 +15,7 @@ const Storeanyltic = () => {
 
   const params = useParams();
   const storeid = params?.id;
-  console.log(nearbyResults)
+  console.log(nearbyResults);
 
   useEffect(() => {
     if (!storeid) return;
@@ -75,7 +75,7 @@ const Storeanyltic = () => {
         <Button
           onClick={() => setOpen(true)}
           variant="secondary"
-          className="px-5 py-3 rounded-full flex items-center gap-2"
+          className="px-5 py-3 rounded-md flex items-center gap-2"
         >
           <FaChartLine />
           Analytics
@@ -97,9 +97,7 @@ const Storeanyltic = () => {
             <h1 className="text-2xl font-bold mb-6">Store Analytics</h1>
 
             <div className="grid grid-cols-3 gap-6">
-              <div className="p-4 border rounded-lg">
-               
-              </div>
+              <div className="p-4 border rounded-lg"></div>
               {/* Nearby Places */}
 
               <div className="p-4 border rounded-lg">

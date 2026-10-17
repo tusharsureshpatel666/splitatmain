@@ -57,7 +57,7 @@ body {
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: #0064ff;
+  --primary: #1100ff;
 
   --primary-foreground: oklch(0.971 0.013 17.38);
   --secondary: oklch(0.967 0.001 286.375);
@@ -92,7 +92,7 @@ body {
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(55.974% 0.24317 261.095);
+  --primary: oklch(53.492% 0.29346 295.245);
   --primary-foreground: oklch(0.971 0.013 17.38);
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
@@ -119,15 +119,6 @@ body {
   --sidebar-ring: oklch(0.396 0.141 25.723);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
 /* ===============================
    MODERN SCROLLBAR
 ================================ */
@@ -149,4 +140,44 @@ body {
 /* IE & old Edge */
 * {
   -ms-overflow-style: none;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background: #c972f1;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container-shell {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(21, 21, 21, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 21, 21, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
 }

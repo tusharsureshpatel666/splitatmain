@@ -55,7 +55,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
               src={blog.imageSrc}
               alt={blog.title}
               fill
-              className="object-cover rounded-full"
+              className="object-cover rounded-md"
             />
           </div>
         )}

@@ -48,7 +48,7 @@ const ShareStore = ({ paramsId }: { paramsId: string }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="rounded-full gap-2">
+        <Button variant="outline" className="rounded-md gap-2">
           <Share className="w-4 h-4" />
           <p className="hidden md:flex">Share</p>
         </Button>

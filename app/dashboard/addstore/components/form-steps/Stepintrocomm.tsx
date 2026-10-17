@@ -17,7 +17,7 @@ const StepIntroComm = () => {
             alt="Illustration"
             fill
             priority
-            className="object-cover rounded-full"
+            className="object-cover rounded-md"
           />
         </div>
 
@@ -32,7 +32,7 @@ const StepIntroComm = () => {
           <Link href="/dashboard" className="w-full">
             <Button
               variant="outline"
-              className="cursor-pointer rounded-full  text-sm font-medium  transition"
+              className="cursor-pointer rounded-md  text-sm font-medium  transition"
             >
               Exit
             </Button>
@@ -40,7 +40,7 @@ const StepIntroComm = () => {
 
           <Button
             onClick={nextSStep}
-            className="rounded-full cursor-pointer  text-sm font-medium  transition"
+            className="rounded-md cursor-pointer  text-sm font-medium  transition"
           >
             Get Started
           </Button>

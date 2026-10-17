@@ -70,7 +70,7 @@ const StoreTypeGrid = () => {
                 <Link href={"/dashboard"}>
                   <Button
                     variant={"outline"}
-                    className="mt-2 px-4 py-1.5 text-sm rounded-full  transition"
+                    className="mt-2 px-4 py-1.5 text-sm rounded-md  transition"
                   >
                     Details
                   </Button>

@@ -49,7 +49,7 @@ export default function ReportDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="destructive" className="rounded-full" size={"lg"}>
+        <Button variant="destructive" className="rounded-md" size={"lg"}>
           <Megaphone className="h-4 w-4" /> Report
         </Button>
       </DialogTrigger>

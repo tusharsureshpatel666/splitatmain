@@ -114,7 +114,7 @@ const NotificationPage = () => {
             {/* Status Badge */}
             <div className="absolute top-4 right-5">
               <span
-                className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                className={`px-3 py-1 rounded-md text-xs font-semibold ${
                   item.status === "PENDING"
                     ? "bg-yellow-100 text-yellow-700"
                     : item.status === "APPROVED"

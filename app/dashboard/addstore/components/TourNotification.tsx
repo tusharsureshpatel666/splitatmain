@@ -59,11 +59,11 @@ export default function NotificationBell() {
     <DropdownMenu>
       {/* 🔔 Bell Button */}
       <DropdownMenuTrigger asChild>
-        <Button variant="secondary" className="relative rounded-full py-5 px-5">
+        <Button variant="secondary" className="relative rounded-md py-5 px-5">
           <FaBell className="text-lg" />
 
           {unreadCount > 0 && (
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold px-1.5 py-0.5 rounded-full">
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold px-1.5 py-0.5 rounded-md">
               {unreadCount > 99 ? "99+" : unreadCount}
             </span>
           )}
@@ -103,7 +103,7 @@ export default function NotificationBell() {
                 }`}
               >
                 {/* 👤 User Image */}
-                <div className="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
+                <div className="relative w-9 h-9 rounded-md overflow-hidden flex-shrink-0">
                   <Image
                     src={n.userImage || "/avatar.avif"}
                     alt="User"

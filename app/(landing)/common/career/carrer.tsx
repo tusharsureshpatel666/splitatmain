@@ -67,7 +67,7 @@ export default function FrontendDeveloperJob() {
       <div className="mt-10">
         <Button
           onClick={() => setOpen(true)}
-          className="rounded-full px-8 font-semibold"
+          className="rounded-md px-8 font-semibold"
         >
           Apply Now
         </Button>

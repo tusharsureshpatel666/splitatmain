@@ -37,8 +37,7 @@ export default function ChatButton({ storeId }: Props) {
     <Button
       onClick={handleConversation}
       disabled={loading}
-      className="rounded-full lg:w-full"
-      
+      className="rounded-md lg:w-full"
     >
       <IoChatbubble />
       <span className="hidden lg:flex">Chat Partner</span>

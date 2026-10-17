@@ -53,16 +53,12 @@ export default function NotificationBell() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <div className="relative cursor-pointer">
-          <Button
-            variant={"secondary"}
-            size={"icon-lg"}
-            className="rounded-full"
-          >
+          <Button variant={"secondary"} size={"icon-lg"} className="rounded-md">
             <FaBell />
           </Button>
 
           {count > 0 && (
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full min-w-[18px] text-center">
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-md min-w-[18px] text-center">
               {count}
             </span>
           )}

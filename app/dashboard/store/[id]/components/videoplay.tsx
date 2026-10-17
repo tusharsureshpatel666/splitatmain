@@ -44,7 +44,7 @@ const VideoPlay = ({ videoUrl, poster }: Props) => {
       {/* Overlay */}
       {!playing && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg">
+          <div className="flex h-16 w-16 items-center justify-center rounded-md bg-white/90 shadow-lg">
             <Play className="h-7 w-7 text-black ml-1" />
           </div>
         </div>

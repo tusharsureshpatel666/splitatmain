@@ -12,7 +12,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import People from "../../store/[id]/components/people";
 import LocationMap from "../../store/[id]/components/MapShower";
 import { Search } from "lucide-react";
-import Link from "next/link";import {
+import Link from "next/link";
+import {
   FiUsers,
   FiTag,
   FiPercent,
@@ -49,7 +50,7 @@ const CommunityStore = () => {
       <div className="w-full space-y-4 px-2 md:px-0">
         <div className="flex pb-5 gap-4 justify-between items-center">
           <Skeleton className="h-6 w-1/2" />
-          <Skeleton className="h-10 w-10 rounded-full" />
+          <Skeleton className="h-10 w-10 rounded-md" />
         </div>
 
         <Skeleton className="w-full h-[250px] rounded-xl" />
@@ -82,7 +83,7 @@ const CommunityStore = () => {
         </h1>
         <CommunityShareStore paramsId={data?.id} />{" "}
         {/* <Link href={`/storealso/audience/${data.id}`}>
-          <Button className="rounded-full" variant={"outline"}>
+          <Button className="rounded-md" variant={"outline"}>
             <FaChartArea />
           </Button>
         </Link> */}

@@ -24,14 +24,12 @@ const Navbar = () => {
     pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-black">
+    <nav className="fixed top-0 z-50 w-full border-b ">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.svg" alt="logo" width={50} height={50} />
-          <h2 className="text-xl font-semibold text-black dark:text-white">
-            Splitat
-          </h2>
+          <h2 className="text-xl font-semibold ">Splitat</h2>
         </Link>
 
         {/* Desktop Links */}
@@ -52,7 +50,7 @@ const Navbar = () => {
               {isActive(item.href) && (
                 <motion.span
                   layoutId="nav-underline"
-                  className="absolute left-0 right-0 -bottom-1 h-[2px] rounded-full bg-black dark:bg-white"
+                  className="absolute left-0 right-0 -bottom-1 h-[2px] rounded-md bg-black dark:bg-white"
                   transition={{
                     type: "spring",
                     stiffness: 380,
@@ -67,12 +65,10 @@ const Navbar = () => {
         {/* Desktop Buttons */}
         <div className="hidden gap-3 md:flex">
           <Link href="/dashboard">
-            <Button variant="outline" className="rounded-full">
-              Login
-            </Button>
+            <Button variant="outline">Login</Button>
           </Link>
           <Link href="/dashboard">
-            <Button className="rounded-full font-semibold">
+            <Button className="rounded-md font-semibold">
               Get Started Free
             </Button>
           </Link>
@@ -118,12 +114,12 @@ const Navbar = () => {
 
               <div className="mt-2 flex flex-col gap-3">
                 <Link href="/dashboard">
-                  <Button variant="outline" className="w-full rounded-full">
+                  <Button variant="outline" className="w-full rounded-md">
                     Login
                   </Button>
                 </Link>
                 <Link href="/dashboard">
-                  <Button className="w-full rounded-full">
+                  <Button className="w-full rounded-md">
                     Get Splitat Free
                   </Button>
                 </Link>

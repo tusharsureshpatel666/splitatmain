@@ -82,7 +82,6 @@ export default function PhoneModal() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
-      
       {/* Modal */}
       <div
         className="
@@ -94,9 +93,7 @@ export default function PhoneModal() {
           shadow-[0_20px_60px_rgba(0,0,0,0.25)]
         "
       >
-        
         {/* Top Gradient */}
-        
 
         {/* Close Button */}
         <button
@@ -104,7 +101,7 @@ export default function PhoneModal() {
           className="
             absolute right-4 top-4
             flex h-9 w-9 items-center justify-center
-            rounded-full
+            rounded-md
             text-gray-400
             transition-all
             hover:bg-gray-100
@@ -116,10 +113,11 @@ export default function PhoneModal() {
 
         {/* Content */}
         <div className="p-7 sm:p-8">
-          
           {/* Icon */}
           <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl dark:bg-black bg-blue-100">
-            <span className="text-3xl"><Phone className="w-5 h-5 text-green-400"/></span>
+            <span className="text-3xl">
+              <Phone className="w-5 h-5 text-green-400" />
+            </span>
           </div>
 
           {/* Heading */}
@@ -129,21 +127,21 @@ export default function PhoneModal() {
             </h2>
 
             <p className="mt-2 text-sm leading-relaxed text-gray-500">
-              We’ll use this number for account verification and important updates.
+              We’ll use this number for account verification and important
+              updates.
             </p>
           </div>
 
           {/* Form */}
           <div className="mt-8 space-y-5">
-            
             {/* Phone Input */}
             <div>
               <label className="mb-2 block text-sm font-medium text-gray-500">
                 Mobile Number
               </label>
 
-        <div
-  className="
+              <div
+                className="
     flex h-14 items-center
     rounded-2xl
     border border-zinc-700
@@ -155,25 +153,25 @@ export default function PhoneModal() {
     focus-within:ring-4
     focus-within:ring-blue-500/20
   "
->
-  <div className="flex items-center gap-2 border-r border-zinc-700 pr-3">
-    <span className="text-lg">🇮🇳</span>
+              >
+                <div className="flex items-center gap-2 border-r border-zinc-700 pr-3">
+                  <span className="text-lg">🇮🇳</span>
 
-    <span className="text-sm font-semibold text-zinc-200">
-      +91
-    </span>
-  </div>
+                  <span className="text-sm font-semibold text-zinc-200">
+                    +91
+                  </span>
+                </div>
 
-  <input
-    type="text"
-    inputMode="numeric"
-    placeholder="9876543210"
-    value={phone}
-    onChange={(e) => {
-      setPhone(e.target.value.replace(/\D/g, ""));
-      setError("");
-    }}
-    className="
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  placeholder="9876543210"
+                  value={phone}
+                  onChange={(e) => {
+                    setPhone(e.target.value.replace(/\D/g, ""));
+                    setError("");
+                  }}
+                  className="
       ml-3 flex-1
       bg-transparent
       text-base font-medium
@@ -181,9 +179,9 @@ export default function PhoneModal() {
       outline-none
       placeholder:text-zinc-500
     "
-    maxLength={10}
-  />
-</div>
+                  maxLength={10}
+                />
+              </div>
             </div>
 
             {/* Error */}
@@ -209,7 +207,7 @@ export default function PhoneModal() {
             >
               {loading ? (
                 <div className="flex items-center gap-2">
-                  <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                  <div className="h-4 w-4 animate-spin rounded-md border-2 border-white border-t-transparent" />
                   Saving...
                 </div>
               ) : (
@@ -219,7 +217,8 @@ export default function PhoneModal() {
 
             {/* Footer */}
             <p className="text-center text-xs leading-relaxed text-gray-400">
-              By continuing, you agree to receive verification messages on this number.
+              By continuing, you agree to receive verification messages on this
+              number.
             </p>
           </div>
         </div>

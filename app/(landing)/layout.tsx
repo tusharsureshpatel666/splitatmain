@@ -1,27 +1,17 @@
-"use client";
+import type { Metadata } from "next";
 
-import React from "react";
-import Navbar from "../components/navbar";
-import Link from "next/link";
-import Footer from "./components/footer";
+export const metadata: Metadata = {
+  title: "SplitAt — Make space work harder",
+  description:
+    "Discover flexible commercial spaces, share unused space, and grow your business with SplitAt.",
+};
 
-interface MainLayoutProps {
-  children: React.ReactNode;
-}
-
-export default function MainLayout({ children }: MainLayoutProps) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white flex flex-col">
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Page Content */}
-      <main className="flex-1 justify-center flex items-center w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
-        {children}
-      </main>
-
-      {/* Footer */}
-      <Footer />
-    </div>
+    <html lang="en">
+      <body className="font-sans antialiased">{children}</body>
+    </html>
   );
 }

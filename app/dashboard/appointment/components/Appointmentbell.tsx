@@ -36,12 +36,12 @@ const Appointmentbell = () => {
     <Link href="/dashboard/appointment/notific">
       <Button
         variant="secondary"
-        className="relative rounded-full p-5 cursor-pointer"
+        className="relative rounded-md p-5 cursor-pointer"
       >
         <FaBell className="text-lg" />
 
         {unreadCount > 0 && (
-          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold px-1.5 py-0.5 rounded-full">
+          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold px-1.5 py-0.5 rounded-md">
             {unreadCount > 99 ? "99+" : unreadCount}
           </span>
         )}

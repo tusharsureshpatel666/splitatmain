@@ -49,7 +49,7 @@ const ComFormNavigation = ({
           onClick={onPrev}
           disabled={step === 1}
           variant="secondary"
-          className="rounded-full"
+          className="rounded-md"
         >
           Prev
         </Button>
@@ -69,7 +69,7 @@ const ComFormNavigation = ({
               size="lg"
               disabled={loading}
               onClick={onFinish}
-              className="rounded-full"
+              className="rounded-md"
             >
               {loading ? (
                 <>
@@ -85,7 +85,7 @@ const ComFormNavigation = ({
               size="lg"
               onClick={onNext}
               disabled={!isValid}
-              className={`rounded-full ${
+              className={`rounded-md ${
                 !isValid ? "opacity-60 cursor-not-allowed" : ""
               }`}
             >

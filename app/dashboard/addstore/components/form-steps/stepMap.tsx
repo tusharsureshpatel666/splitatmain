@@ -31,7 +31,6 @@ export default function LocationPicker({
   setPin,
   address,
   setAddress,
- 
 }: Props) {
   const [loading, setLoading] = useState(false);
   // const [address, setAddress] = useState("");
@@ -40,7 +39,7 @@ export default function LocationPicker({
   );
 
   const [results, setResults] = useState<any[]>([]);
-  const [open, setOpen] = useState(false); 
+  const [open, setOpen] = useState(false);
 
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<google.maps.Map | null>(null);
@@ -195,7 +194,7 @@ export default function LocationPicker({
           ref={wrapperRef}
           className="absolute top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-xl z-50"
         >
-          <div className="flex items-center bg-white text-black rounded-full shadow px-6 py-5">
+          <div className="flex items-center bg-white text-black rounded-md shadow px-6 py-5">
             <MapPin className="mr-3 text-gray-500 w-4 h-4" />
             <input
               value={address}

@@ -41,7 +41,7 @@ export default function LoveStore({ storeId, initialLiked }: LoveStoreProps) {
       onClick={onLike}
       disabled={isPending}
       className={cn(
-        "relative flex items-center gap-2 rounded-full px-4 transition",
+        "relative flex items-center gap-2 rounded-md px-4 transition",
         liked && "border-red-500",
       )}
     >

@@ -72,7 +72,7 @@ const DashNav = () => {
         {/* <Link href="/dashboard/findstore">
           <Button
             variant="outline"
-            className="rounded-md lg:rounded-full cursor-pointer dark:text-white text-black flex items-center gap-2"
+            className="rounded-md lg:rounded-md cursor-pointer dark:text-white text-black flex items-center gap-2"
           >
             <Search className="w-5 h-5" />
             <span className="hidden lg:inline">Find Store Partner</span>
@@ -81,7 +81,7 @@ const DashNav = () => {
         {/* <Link href={"/dashboard/communitystore/Addcommunitystore"}>
           <Button
             variant="outline"
-            className="rounded-md lg:rounded-full cursor-pointer dark:text-white text-black flex items-center gap-2"
+            className="rounded-md lg:rounded-md cursor-pointer dark:text-white text-black flex items-center gap-2"
           >
             <User className="w-5 h-5" />
             <span className="hidden lg:inline">Add As Owner</span>
@@ -90,20 +90,20 @@ const DashNav = () => {
 
         {/* Button 2 — Share Your Store */}
         <Link href="/dashboard/addstore" className="hidden md:flex">
-          <Button className="rounded-md lg:rounded-full cursor-pointer font-semibold flex items-center gap-2">
+          <Button className="rounded-md lg:rounded-md cursor-pointer font-semibold flex items-center gap-2">
             <Plus className="w-5 h-5" />
             <span className="hidden lg:inline">List Your Store</span>
           </Button>
         </Link>
         <Link href={"/chat/conversation"}>
           <Button
-            className="relative rounded-full px-5 py-5"
+            className="relative rounded-md px-5 py-5"
             variant={"secondary"}
           >
             <MessageCircle className="w-5 h-5" />
             <span className="hidden lg:flex">Message</span>
             {count > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full min-w-[18px] text-center">
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-md min-w-[18px] text-center">
                 {count}
               </span>
             )}

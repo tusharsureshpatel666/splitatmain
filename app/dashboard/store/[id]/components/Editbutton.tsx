@@ -31,7 +31,7 @@ const EditButton = () => {
       <Button
         onClick={handleEdit}
         disabled
-        className="rounded-full w-full opacity-70 cursor-not-allowed"
+        className="rounded-md w-full opacity-70 cursor-not-allowed"
         size="lg"
       >
         <Edit className="w-4 h-4 " />

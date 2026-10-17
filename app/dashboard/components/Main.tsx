@@ -126,7 +126,7 @@ export default function SearchBox() {
   return (
     <div className="relative w-full max-w-6xl" ref={wrapperRef}>
       {/* Search Bar */}
-      <div className="flex items-center rounded-full border border-gray-300 bg-white dark:bg-slate-950 dark:border-gray-800 shadow-lg">
+      <div className="flex items-center rounded-md border border-gray-300 bg-white dark:bg-slate-950 dark:border-gray-800 shadow-lg">
         <div className="flex flex-1 items-center gap-3 px-6 py-5">
           <Search className="h-5 w-5 text-gray-500" />
           <input

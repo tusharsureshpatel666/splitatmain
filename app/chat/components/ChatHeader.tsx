@@ -20,10 +20,10 @@ export default function ChatHeader({
   conversationId: string;
 }) {
   const [header, setHeader] = useState<{
-    id: string
+    id: string;
     name: string;
     image: string;
-    phone:string;
+    phone: string;
   } | null>(null);
 
   const [loading, setLoading] = useState(true);
@@ -38,7 +38,7 @@ export default function ChatHeader({
           `/api/conversation/chatheader/${conversationId}`,
         );
         setHeader(res.data);
-        console.log(res.data.phone)
+        console.log(res.data.phone);
       } catch (error) {
         console.error("Header fetch error:", error);
       } finally {
@@ -56,17 +56,17 @@ export default function ChatHeader({
 
   if (!header) return null;
 
- const handleCopyPhone = async () => {
-  if (!header.phone) return;
+  const handleCopyPhone = async () => {
+    if (!header.phone) return;
 
-  try {
-    await navigator.clipboard.writeText(header.phone);
+    try {
+      await navigator.clipboard.writeText(header.phone);
 
-     toast.success("Phone Number Copied")
-  } catch (error) {
-    console.error("Copy failed", error);
-  }
-};
+      toast.success("Phone Number Copied");
+    } catch (error) {
+      console.error("Copy failed", error);
+    }
+  };
 
   return (
     <div className="flex items-center justify-between gap-3 border-b px-4 py-3 bg-white dark:bg-black">
@@ -82,7 +82,7 @@ export default function ChatHeader({
             alt={header.name}
             width={40}
             height={40}
-            className="rounded-full"
+            className="rounded-md"
           />
           <AvatarFallback>
             {header.name?.charAt(0).toUpperCase()}
@@ -98,21 +98,25 @@ export default function ChatHeader({
         </div>
       </div>
       <div className="flex gap-3">
-        <Button onClick={handleCopyPhone} variant={"secondary"}  className="rounded-full">
+        <Button
+          onClick={handleCopyPhone}
+          variant={"secondary"}
+          className="rounded-md"
+        >
           <Phone className="w-5 h-5" />
           <span className="hidden sm:inline ">Call</span>
         </Button>
 
         <Link href={`/dashboard/appointed/${header.id}`}>
-          <Button className="rounded-full">
+          <Button className="rounded-md">
             <FaPaperPlane className="w-5 h-5" />
             <span className="hidden sm:inline ">Visit Place</span>
           </Button>
         </Link>
-{/* 
+        {/* 
         <Link href={`/dashboard/appointed/${}`}></Link> */}
         {/* <Link href={`/dashboard/tour/${header.id}`}>
-          <Button className="rounded-full">
+          <Button className="rounded-md">
             <FaPaperPlane className="w-5 h-5" />
             <span className="hidden sm:inline ">Take Tour</span>
           </Button>

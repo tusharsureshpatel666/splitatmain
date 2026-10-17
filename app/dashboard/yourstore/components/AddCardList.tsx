@@ -75,7 +75,7 @@ const AddCardList = () => {
           description="You haven’t created any store yet."
         />
         <Link href="/dashboard/addstore">
-          <Button size="lg" className="rounded-full px-10 py-6">
+          <Button size="lg" className="rounded-md px-10 py-6">
             Create Store
           </Button>
         </Link>
@@ -116,7 +116,7 @@ const AddCardList = () => {
 
                 {/* Optional badge example */}
                 {/* {store.shareMode && (
-                  <div className="absolute top-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-xs font-medium">
+                  <div className="absolute top-3 left-3 bg-black/70 text-white px-3 py-1 rounded-md text-xs font-medium">
                     {formatShareMode(store.shareMode)}
                   </div>
                 )} */}

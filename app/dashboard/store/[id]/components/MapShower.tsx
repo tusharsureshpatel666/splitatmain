@@ -127,7 +127,7 @@ export default function LocationMap({
           <button
             onClick={getUserLocation}
             disabled={loading}
-            className="bg-black text-white px-6 py-2.5 rounded-full shadow-lg hover:scale-105 transition disabled:opacity-60 flex items-center gap-2"
+            className="bg-black text-white px-6 py-2.5 rounded-md shadow-lg hover:scale-105 transition disabled:opacity-60 flex items-center gap-2"
           >
             {loading && <Loader2 className="animate-spin w-4 h-4" />}
             Get Directions

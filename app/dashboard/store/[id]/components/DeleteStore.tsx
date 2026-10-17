@@ -35,7 +35,7 @@ export default function DeleteStoreButton({ storeId }: { storeId: string }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="destructive" className="items-center rounded-full">
+        <Button variant="destructive" className="items-center rounded-md">
           <Trash className="w-4 h-4 " />
           <p className="hidden md:flex">Delete</p>
         </Button>

@@ -1,5 +1,3 @@
-
-
 import { getStoreById } from "@/lib/query/getstore";
 import { auth } from "@/lib/auth";
 import DeleteStoreButton from "./components/DeleteStore";
@@ -10,7 +8,6 @@ import { MobileImageSlider } from "./components/MobileNav";
 import { DesktopImageGrid } from "./components/Desktopgrid";
 import OwnerButton from "./components/OwerButton";
 import Heading from "../../components/heading";
-
 
 import ReportDialog from "../../components/report";
 import ChatPartnerButton from "../../components/ChatPartner";
@@ -98,7 +95,7 @@ export default async function StorePage({ params }: StorePageProps) {
             href={`/storealso/audience/${storeId.id}`}
             className="hidden md:flex"
           >
-            <Button className="rounded-full" variant={"outline"}>
+            <Button className="rounded-md" variant={"outline"}>
               <FaChartArea /> Analytics
             </Button>
           </Link>
@@ -248,7 +245,7 @@ export default async function StorePage({ params }: StorePageProps) {
 
             {!isOwner && (
               <Link href={`/storealso/audience/${storeId.id}`}>
-                <Button className="rounded-full" variant={"outline"}>
+                <Button className="rounded-md" variant={"outline"}>
                   <FaChartArea />
                 </Button>
               </Link>

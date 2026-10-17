@@ -154,7 +154,7 @@ export default function ConversationList() {
                     <AvatarFallback>{other.name?.charAt(0)}</AvatarFallback>
                   </Avatar>
                   {isOnline && (
-                    <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white dark:border-black" />
+                    <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-md border-2 border-white dark:border-black" />
                   )}
                 </div>
 
@@ -190,7 +190,7 @@ export default function ConversationList() {
 
                     {/* THE NOTIFICATION DOT/NUMBER */}
                     {conv.unreadCount > 0 && (
-                      <div className="bg-blue-600 text-white text-xs h-5 w-5 rounded-full flex items-center justify-center">
+                      <div className="bg-blue-600 text-white text-xs h-5 w-5 rounded-md flex items-center justify-center">
                         {conv.unreadCount}
                       </div>
                     )}

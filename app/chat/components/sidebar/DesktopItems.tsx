@@ -19,7 +19,7 @@ const DesktopItems = ({ href, label, icon: Icon, active, onClick }: Props) => {
       onClick={onClick}
       className={clsx(
         `
-        group flex items-center gap-5 rounded-full px-3 py-3 text-sm
+        group flex items-center gap-5 rounded-md px-3 py-3 text-sm
         transition-colors duration-200
         hover:bg-[#202c33]
         `,
