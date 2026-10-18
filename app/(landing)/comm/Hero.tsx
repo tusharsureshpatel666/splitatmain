@@ -25,7 +25,7 @@ export default function Hero() {
             <br />
             <span className="relative inline-block">
               Better <span className="relative z-10">together.</span>
-              <span className="absolute bottom-[5%] left-0 -z-0 h-[23%] w-full -rotate-1 rounded-sm bg-lime" />
+              <span className="absolute bottom-[5%] left-0 -z-0 h-[23%] w-full -rotate-1 rounded-sm bg-purple-500" />
             </span>
           </h1>
 
