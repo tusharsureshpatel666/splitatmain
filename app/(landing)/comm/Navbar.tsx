@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Menu } from "lucide-react";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
@@ -19,12 +19,20 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-3">
-          <Button variant={"outline"} size={"lg"} className="rounded-full">
-            Login
-          </Button>
-          <Button size={"lg"} className="rounded-full">
-            Get Started
-          </Button>
+          <Link href={"/dashboard"}>
+            <Button
+              variant={"outline"}
+              size={"lg"}
+              className="rounded-full hidden md:flex"
+            >
+              Login
+            </Button>
+          </Link>
+          <Link href={"/dashboard"}>
+            <Button size={"lg"} className="rounded-full">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </nav>
     </header>
