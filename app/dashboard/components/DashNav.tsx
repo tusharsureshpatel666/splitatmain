@@ -55,16 +55,16 @@ const DashNav = () => {
         px-4 py-4
         md:px-6 md:py-5
         lg:px-9 lg:py-6
-        bg-white dark:bg-[#09090b]
+        
          
       "
     >
       <Link href="/dashboard" className="flex items-center ">
         <Image src="/logo.svg" alt="logo" width={50} height={50} />
 
-        <h2 className="text-xl font-semibold dark:text-white text-black">
-          Splitat
-        </h2>
+        <span className="text-lg font-bold tracking-tight">
+          Splitat<span className="text-[#7957e8]">.</span>
+        </span>
       </Link>
 
       <div className="flex gap-3 items-center">
