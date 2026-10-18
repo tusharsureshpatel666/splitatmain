@@ -28,8 +28,6 @@ export default function StoreCard({ store }: StoreCardProps) {
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
-
-        {/* 🤍 Save button (Airbnb style) */}
       </div>
 
       {/* 📄 Text below image */}
