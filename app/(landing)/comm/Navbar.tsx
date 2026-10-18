@@ -14,7 +14,9 @@ export default function Navbar() {
         >
           <div className="flex items-center gap-2">
             <Image src={"/logo.svg"} width={50} height={50} alt="hello" />
-            <h1 className="text-2xl font-semibold">Splitat</h1>
+            <span className="text-lg font-bold tracking-tight">
+              Splitat<span className="text-[#7957e8]">.</span>
+            </span>
           </div>
         </Link>
 
