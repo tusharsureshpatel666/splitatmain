@@ -89,16 +89,6 @@ export default function ListedStore() {
   return (
     <section className=" py-5 ">
       {/* Section heading */}
-      <div className="mb-6 flex items-end justify-between gap-4">
-        <div>
-          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-violet-500">
-            Find your next business space
-          </p>
-          <h2 className="text-xl font-semibold tracking-tight text-zinc-950 dark:text-white sm:text-2xl">
-            Spaces to explore
-          </h2>
-        </div>
-      </div>
 
       {/* Airbnb-style listing grid */}
       <div className=" px-0 py-1 ">
