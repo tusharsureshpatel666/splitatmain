@@ -14,7 +14,7 @@ export async function POST(req: Request) {
         latitude: true,
         longitude: true,
         streetAddress: true,
-        user: {
+        owner: {
           select: {
             userBussinessType: true,
           },
@@ -24,6 +24,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json(storeany);
   } catch (error) {
+    console.log(error);
     return NextResponse.error(error);
   }
 }

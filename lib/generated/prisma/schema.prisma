@@ -37,7 +37,7 @@ model User {
   likedStores StoreLike[]
 
   notification      Notification[]
-  userBussinessType String?
+  userBussinessType String
 
   messages          Message[]
   buyer             Conversation[]
