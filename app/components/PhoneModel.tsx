@@ -3,8 +3,16 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import {
+  ArrowRight,
+  CheckCircle2,
+  LoaderCircle,
+  Phone,
+  ShieldCheck,
+  X,
+} from "lucide-react";
+
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
 
 export default function PhoneModal() {
   const router = useRouter();
@@ -13,38 +21,40 @@ export default function PhoneModal() {
   const [error, setError] = useState("");
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [checking, setChecking] = useState(true);
 
-  // ✅ Check if phone already exists
   useEffect(() => {
+    let active = true;
+
     const checkPhone = async () => {
       try {
         const res = await axios.get("/api/phone/phonecheck");
 
-        if (!res.data.phone) {
+        if (active && !res.data.phone) {
           setOpen(true);
         }
       } catch {
-        setOpen(true);
+        if (active) setOpen(true);
+      } finally {
+        if (active) setChecking(false);
       }
     };
 
-    checkPhone();
+    void checkPhone();
+
+    return () => {
+      active = false;
+    };
   }, []);
 
-  // ✅ Validate Indian mobile number
   const validatePhone = (value: string) => {
-    if (value.length !== 10) {
-      return "Phone number must be exactly 10 digits";
-    }
-
-    if (!/^[6-9]/.test(value)) {
-      return "Indian mobile numbers must start with 6-9";
+    if (!/^[6-9]\d{9}$/.test(value)) {
+      return "Enter a valid 10-digit Indian mobile number.";
     }
 
     return "";
   };
 
-  // ✅ Submit phone number
   const handleSubmit = async () => {
     const validationError = validatePhone(phone);
 
@@ -53,172 +63,165 @@ export default function PhoneModal() {
       return;
     }
 
+    setLoading(true);
+    setError("");
+
     try {
-      setLoading(true);
+      await axios.post("/api/savephoneno", { phone });
 
-      await axios.post("/api/savephoneno", {
-        phone,
-      });
-
-      setError("");
       setOpen(false);
-
       router.refresh();
-    } catch {
-      setError("Failed to save phone number");
+    } catch (err: any) {
+      setError(
+        err?.response?.data?.message ||
+          "Unable to save your number. Please try again.",
+      );
     } finally {
       setLoading(false);
     }
   };
 
-  // ✅ Close modal
   const handleClose = () => {
     setOpen(false);
     router.push("/dashboard");
   };
 
-  // ✅ Hide component completely
-  if (!open) return null;
+  if (checking || !open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
-      {/* Modal */}
-      <div
-        className="
-          relative w-full max-w-md
-          overflow-hidden
-          rounded-3xl
-          bg-white
-          dark:bg-gray-900
-          shadow-[0_20px_60px_rgba(0,0,0,0.25)]
-        "
-      >
-        {/* Top Gradient */}
+    <div
+      className="fixed inset-0 z-[100] flex items-end justify-center bg-black/65 p-0 backdrop-blur-md sm:items-center sm:p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="phone-modal-title"
+    >
+      <div className="relative max-h-[95dvh] w-full max-w-[440px] overflow-y-auto rounded-t-[28px] border border-white/10 bg-white shadow-2xl dark:bg-[#111114] sm:rounded-[28px]">
+        {/* Decorative glow */}
+        <div className="pointer-events-none absolute -right-20 -top-24 h-56 w-56 rounded-full bg-violet-500/15 blur-3xl" />
 
-        {/* Close Button */}
-        <button
-          onClick={handleClose}
-          className="
-            absolute right-4 top-4
-            flex h-9 w-9 items-center justify-center
-            rounded-md
-            text-gray-400
-            transition-all
-            hover:bg-gray-100
-            hover:text-black cursor-pointer
-          "
-        >
-          ✕
-        </button>
+        {/* Header */}
 
-        {/* Content */}
-        <div className="p-7 sm:p-8">
-          {/* Icon */}
-          <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl dark:bg-black bg-blue-100">
-            <span className="text-3xl">
-              <Phone className="w-5 h-5 text-green-400" />
-            </span>
-          </div>
+        {/* Main content */}
+        <div className="relative px-5 pb-7 pt-7 sm:px-7 sm:pb-8 sm:pt-8">
+          <div className="mx-auto flex max-w-sm flex-col items-center text-center">
+            <div className="mb-5 flex h-[68px] w-[68px] items-center justify-center rounded-[22px] border border-violet-200 bg-violet-50 text-violet-600 dark:border-violet-400/20 dark:bg-violet-400/[0.09] dark:text-violet-300">
+              <Phone size={29} strokeWidth={1.7} />
+            </div>
 
-          {/* Heading */}
-          <div className="text-center">
-            <h2 className="text-2xl font-bold tracking-tight ">
-              Add Your Phone Number
+            <h2
+              id="phone-modal-title"
+              className="text-[26px] font-semibold tracking-[-0.045em] text-zinc-950 dark:text-white sm:text-[30px]"
+            >
+              Add your phone number
             </h2>
 
-            <p className="mt-2 text-sm leading-relaxed text-gray-500">
-              We’ll use this number for account verification and important
-              updates.
+            <p className="mt-2 max-w-[310px] text-xs leading-6 text-zinc-500 dark:text-zinc-400">
+              Keep your SplitAt account connected. We’ll use your number for
+              important account updates.
             </p>
           </div>
 
           {/* Form */}
-          <div className="mt-8 space-y-5">
-            {/* Phone Input */}
+          <form
+            className="mt-8 space-y-5"
+            onSubmit={(e) => {
+              e.preventDefault();
+              void handleSubmit();
+            }}
+          >
             <div>
-              <label className="mb-2 block text-sm font-medium text-gray-500">
-                Mobile Number
-              </label>
+              <div className="mb-2 flex items-center justify-between">
+                <label
+                  htmlFor="phone"
+                  className="text-sm font-medium text-zinc-800 dark:text-zinc-200"
+                >
+                  Mobile number
+                </label>
 
-              <div
-                className="
-    flex h-14 items-center
-    rounded-2xl
-    border border-zinc-700
-    bg-zinc-900
-    px-4
-    transition-all
-    focus-within:border-blue-500
-    focus-within:bg-zinc-950
-    focus-within:ring-4
-    focus-within:ring-blue-500/20
-  "
-              >
-                <div className="flex items-center gap-2 border-r border-zinc-700 pr-3">
-                  <span className="text-lg">🇮🇳</span>
+                <span className="text-xs text-zinc-400">Required</span>
+              </div>
 
-                  <span className="text-sm font-semibold text-zinc-200">
-                    +91
-                  </span>
-                </div>
+              <div className="flex h-14 items-center rounded-2xl border border-zinc-200 bg-zinc-50 px-4 transition focus-within:border-violet-500 focus-within:bg-white focus-within:ring-4 focus-within:ring-violet-500/10 dark:border-white/10 dark:bg-white/[0.04] dark:focus-within:bg-white/[0.06]">
+                <span className="mr-3 text-xl" aria-hidden="true">
+                  🇮🇳
+                </span>
+
+                <span className="border-r border-zinc-200 pr-3 text-sm font-semibold text-zinc-800 dark:border-white/15 dark:text-zinc-200">
+                  +91
+                </span>
 
                 <input
-                  type="text"
+                  id="phone"
+                  name="phone"
+                  type="tel"
                   inputMode="numeric"
-                  placeholder="9876543210"
+                  autoComplete="tel-national"
+                  placeholder="98765 43210"
                   value={phone}
+                  maxLength={10}
+                  required
+                  aria-invalid={!!error}
+                  aria-describedby={error ? "phone-error" : "phone-hint"}
                   onChange={(e) => {
-                    setPhone(e.target.value.replace(/\D/g, ""));
+                    setPhone(e.target.value.replace(/\D/g, "").slice(0, 10));
                     setError("");
                   }}
-                  className="
-      ml-3 flex-1
-      bg-transparent
-      text-base font-medium
-      text-white
-      outline-none
-      placeholder:text-zinc-500
-    "
-                  maxLength={10}
+                  className="ml-3 min-w-0 flex-1 bg-transparent text-base font-medium tracking-wide text-zinc-950 outline-none placeholder:text-zinc-400 dark:text-white dark:placeholder:text-zinc-600"
                 />
+
+                {phone.length === 10 && !validatePhone(phone) && (
+                  <CheckCircle2 size={19} className="text-emerald-500" />
+                )}
+              </div>
+
+              <div className="mt-2 flex items-center justify-between gap-2">
+                <p
+                  id="phone-hint"
+                  className="text-xs text-zinc-500 dark:text-zinc-400"
+                >
+                  Enter your 10-digit mobile number
+                </p>
+
+                <span className="shrink-0 text-xs tabular-nums text-zinc-400">
+                  {phone.length}/10
+                </span>
               </div>
             </div>
 
-            {/* Error */}
             {error && (
-              <p className="text-center text-sm font-medium text-red-500">
+              <p
+                id="phone-error"
+                role="alert"
+                className="rounded-xl border border-red-200 bg-red-50 px-3.5 py-3 text-sm text-red-700 dark:border-red-400/20 dark:bg-red-400/[0.07] dark:text-red-300"
+              >
                 {error}
               </p>
             )}
 
-            {/* Button */}
             <Button
-              onClick={handleSubmit}
-              disabled={loading}
-              className="
-                h-14 w-full
-                rounded-2xl
-                text-base font-semibold
-                shadow-lg
-                transition-all
-                hover:scale-[1.01]
-                active:scale-[0.99]
-              "
+              type="submit"
+              disabled={loading || phone.length !== 10}
+              className="h-14 w-full rounded-2xl bg-violet-600 text-sm font-semibold text-white shadow-lg shadow-violet-600/20 transition hover:bg-violet-700 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50 dark:bg-violet-500 dark:hover:bg-violet-600"
             >
               {loading ? (
-                <div className="flex items-center gap-2">
-                  <div className="h-4 w-4 animate-spin rounded-md border-2 border-white border-t-transparent" />
-                  Saving...
-                </div>
+                <>
+                  <LoaderCircle className="mr-2 animate-spin" size={18} />
+                  Saving your number...
+                </>
               ) : (
-                "Continue"
+                <>
+                  Continue
+                  <ArrowRight className="ml-2" size={17} />
+                </>
               )}
             </Button>
+          </form>
 
-            {/* Footer */}
-            <p className="text-center text-xs leading-relaxed text-gray-400">
-              By continuing, you agree to receive verification messages on this
-              number.
+          {/* Privacy note */}
+          <div className="mt-6 border-t border-zinc-200/80 pt-5 dark:border-white/[0.08]">
+            <p className="text-center text-xs leading-5 text-zinc-500 dark:text-zinc-400">
+              Your contact details are used for important SplitAt account
+              updates. You can update your number later in your profile.
             </p>
           </div>
         </div>
