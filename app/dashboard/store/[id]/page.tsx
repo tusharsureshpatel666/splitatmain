@@ -24,6 +24,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ChartBar } from "lucide-react";
 import { FaChartArea } from "react-icons/fa";
+import StoreDescription from "./components/storedesc";
 
 interface StorePageProps {
   params: {
@@ -88,7 +89,6 @@ export default async function StorePage({ params }: StorePageProps) {
         </h1>
 
         <div className="flex gap-4 items-center text-sm">
-          <ShareStore paramsId={storeId} />
           <LoveStore storeId={storeId.id} initialLiked={initialLiked} />
           {isOwner && <DeleteStoreButton storeId={store?.id} />}
           <Link
@@ -120,92 +120,121 @@ export default async function StorePage({ params }: StorePageProps) {
       <span className="text-sm text-gray-500"></span>
 
       {/* ================= MAIN GRID ================= */}
-      <div className="grid grid-cols-1 mt-5 lg:grid-cols-3 gap-8">
-        {/* ================= LEFT CONTENT ================= */}
-        <div className="lg:col-span-2 space-y-6">
-          {/* Owner Section */}
-          <div className="flex justify-between items-center border-b pb-6">
+
+      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-10">
+        {/* LEFT CONTENT */}
+        <div className="min-w-0 space-y-8 lg:col-span-2">
+          {/* Owner section */}
+          <section className="flex items-center justify-between gap-4 border-b border-gray-200/80 pb-6 dark:border-white/[0.08]">
             <OwnerButton
               image={OwerDetail.image || "/avatar.avif"}
               name={OwerDetail.name || ""}
               createAt={String(store?.createdAt)}
             />
+
             <ReportDialog />
-          </div>
+          </section>
 
-          <div className="gap-4 flex flex-col ">
-            <h1 className="text-xl">Store Sharing Method</h1>
-            <SharingType
-              sharetype={store?.shareMode}
-              split={store?.sqft}
-              days={store?.days}
-              startTime={store?.startTime ?? ""}
-              endTime={store?.endTime ?? ""}
-              dayOrNight={store?.dayOrNight}
-            />
-            <OwnerDesc
-              businessName={store?.businessType}
-              ownerName={OwerDetail.name}
-              description={store?.desc}
-            />
-            <People description={store?.peopleDesc} />
-          </div>
-        </div>
-
-        {/* ================= RIGHT SIDE (Desktop Reserve Card) ================= */}
-        <div className="hidden lg:block">
-          <div
-            className="sticky top-24 border border-gray-200 dark:border-gray-700 
-                  bg-white dark:bg-black
-                  rounded-2xl shadow-sm p-6 space-y-5 "
-          >
-            {/* Discount + Price */}
-            <div className="space-y-1">
-              <div className="flex items-end gap-1">
-                <span className="text-3xl font-bold text-gray-900 dark:text-white leading-none">
-                  ₹{store?.priceInr}
-                </span>
-                <span className="text-sm text-gray-500 mb-1">/month</span>
+          {/* Store sharing method */}
+          <section className="space-y-5">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2">
+                <h2 className="text-xl font-semibold tracking-tight text-gray-950 dark:text-white sm:text-2xl">
+                  Store Desc
+                </h2>
               </div>
 
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                Inclusive of all taxes
+              <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
+                Explore how this space can work around your business.
               </p>
             </div>
 
-            {/* Divider */}
-            <div className="border-t border-gray-200 dark:border-gray-700"></div>
-
-            {/* Offers Section */}
-            <div className="space-y-3">
-              <h3 className="text-sm font-semibold text-orange-600">
-                Save Extra with 3 offers
-              </h3>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-sm text-gray-700 dark:text-gray-300">
-                <span className="font-medium text-black dark:text-white">
-                  Cashback:
-                </span>{" "}
-                Get 5% back with select bank cards.
-              </div>
-
-              <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-xl text-sm text-gray-700 dark:text-gray-300">
-                <span className="font-medium text-black dark:text-white">
-                  Bank Offer:
-                </span>{" "}
-                7.5% Instant Discount on EMI transactions.
-              </div>
+            <div className="">
+              <StoreDescription description={store?.desc} />
             </div>
-
-            {/* CTA Button */}
-            {isOwner ? (
-              <Editbutton id={store?.id} />
-            ) : (
-              <ChatPartnerButton storeId={store?.id} />
-            )}
-          </div>
+          </section>
         </div>
+
+        {/* RIGHT: STICKY PRICING CARD */}
+        <aside className="hidden lg:block">
+          <div className="sticky top-24 overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-[0_8px_40px_-20px_rgba(0,0,0,0.16)] dark:border-white/[0.09] dark:bg-[#111116] dark:shadow-[0_12px_50px_-20px_rgba(0,0,0,0.6)]">
+            {/* Price */}
+            <div className="space-y-4 p-6">
+              <div>
+                <p className="text-xs font-medium uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400">
+                  Space rental
+                </p>
+
+                <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <span className="text-4xl font-semibold tracking-[-0.045em] text-gray-950 dark:text-white">
+                    ₹{Number(store?.priceInr ?? 0).toLocaleString("en-IN")}
+                  </span>
+
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                    / month
+                  </span>
+                </div>
+
+                <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                  Listed rental price for this space
+                </p>
+              </div>
+
+              {/* Subtle accent */}
+              <div className="h-px bg-gradient-to-r from-violet-500/50 via-gray-200 to-transparent dark:via-white/[0.10]" />
+
+              {/* Simple listing information */}
+              <div className="flex items-start gap-3 rounded-xl bg-gray-50 p-3.5 dark:bg-white/[0.035]">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-violet-100 text-violet-700 dark:bg-violet-400/[0.12] dark:text-violet-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 10h18" />
+                    <path d="M5 10V6l7-3 7 3v4" />
+                    <path d="M5 10v9" />
+                    <path d="M19 10v9" />
+                    <path d="M3 19h18" />
+                    <path d="M9 19v-5h6v5" />
+                  </svg>
+                </div>
+
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                    Commercial space
+                  </p>
+                  <p className="mt-1 text-xs leading-5 text-gray-500 dark:text-gray-400">
+                    Connect with the owner to discuss sharing arrangements and
+                    availability.
+                  </p>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="pt-1">
+                {isOwner ? (
+                  <Editbutton id={store?.id} />
+                ) : (
+                  <ChatPartnerButton storeId={store?.id} />
+                )}
+              </div>
+
+              <p className="text-center text-[11px] leading-5 text-gray-500 dark:text-gray-500">
+                Confirm final rental terms directly with the owner.
+              </p>
+            </div>
+          </div>
+        </aside>
       </div>
+
       <LocationMap
         lat={store?.latitude}
         lng={store?.longitude}

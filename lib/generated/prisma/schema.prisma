@@ -33,8 +33,9 @@ model User {
 
   createdAt DateTime @default(now())
 
-  stores            Store[]        @relation("OwerStores")
-  likedStores       StoreLike[]
+  stores      Store[]     @relation("OwerStores")
+  likedStores StoreLike[]
+
   notification      Notification[]
   userBussinessType String?
 
@@ -81,9 +82,9 @@ model Store {
   areaLocality   String?
   fullAddress    String
 
-  storeSize    String
-  businessType String
-  videoUrl     String?
+  storeSize String
+
+  videoUrl String?
 
   country String?
   state   String?
@@ -97,13 +98,6 @@ model Store {
   images         StoreImage[]
 
   priceInr Int
-
-  shareMode  ShareMode
-  startTime  String?
-  endTime    String?
-  days       String[]
-  sqft       Int?
-  dayOrNight String?
 
   likes StoreLike[]
 
@@ -126,7 +120,8 @@ model CommunityStore {
 
   videoUrl String?
 
-  flatno         String?
+  flatno String?
+
   streetAddress  String?
   NearbyLandMark String?
   areaLocality   String?

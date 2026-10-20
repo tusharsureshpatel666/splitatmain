@@ -5210,14 +5210,12 @@ export namespace Prisma {
     latitude: number | null
     longitude: number | null
     priceInr: number | null
-    sqft: number | null
   }
 
   export type StoreSumAggregateOutputType = {
     latitude: number | null
     longitude: number | null
     priceInr: number | null
-    sqft: number | null
   }
 
   export type StoreMinAggregateOutputType = {
@@ -5232,7 +5230,6 @@ export namespace Prisma {
     areaLocality: string | null
     fullAddress: string | null
     storeSize: string | null
-    businessType: string | null
     videoUrl: string | null
     country: string | null
     state: string | null
@@ -5242,11 +5239,6 @@ export namespace Prisma {
     longitude: number | null
     bannerImageUrl: string | null
     priceInr: number | null
-    shareMode: $Enums.ShareMode | null
-    startTime: string | null
-    endTime: string | null
-    sqft: number | null
-    dayOrNight: string | null
     createdAt: Date | null
     updatedAt: Date | null
     rentedout: boolean | null
@@ -5264,7 +5256,6 @@ export namespace Prisma {
     areaLocality: string | null
     fullAddress: string | null
     storeSize: string | null
-    businessType: string | null
     videoUrl: string | null
     country: string | null
     state: string | null
@@ -5274,11 +5265,6 @@ export namespace Prisma {
     longitude: number | null
     bannerImageUrl: string | null
     priceInr: number | null
-    shareMode: $Enums.ShareMode | null
-    startTime: string | null
-    endTime: string | null
-    sqft: number | null
-    dayOrNight: string | null
     createdAt: Date | null
     updatedAt: Date | null
     rentedout: boolean | null
@@ -5296,7 +5282,6 @@ export namespace Prisma {
     areaLocality: number
     fullAddress: number
     storeSize: number
-    businessType: number
     videoUrl: number
     country: number
     state: number
@@ -5306,12 +5291,6 @@ export namespace Prisma {
     longitude: number
     bannerImageUrl: number
     priceInr: number
-    shareMode: number
-    startTime: number
-    endTime: number
-    days: number
-    sqft: number
-    dayOrNight: number
     createdAt: number
     updatedAt: number
     rentedout: number
@@ -5323,14 +5302,12 @@ export namespace Prisma {
     latitude?: true
     longitude?: true
     priceInr?: true
-    sqft?: true
   }
 
   export type StoreSumAggregateInputType = {
     latitude?: true
     longitude?: true
     priceInr?: true
-    sqft?: true
   }
 
   export type StoreMinAggregateInputType = {
@@ -5345,7 +5322,6 @@ export namespace Prisma {
     areaLocality?: true
     fullAddress?: true
     storeSize?: true
-    businessType?: true
     videoUrl?: true
     country?: true
     state?: true
@@ -5355,11 +5331,6 @@ export namespace Prisma {
     longitude?: true
     bannerImageUrl?: true
     priceInr?: true
-    shareMode?: true
-    startTime?: true
-    endTime?: true
-    sqft?: true
-    dayOrNight?: true
     createdAt?: true
     updatedAt?: true
     rentedout?: true
@@ -5377,7 +5348,6 @@ export namespace Prisma {
     areaLocality?: true
     fullAddress?: true
     storeSize?: true
-    businessType?: true
     videoUrl?: true
     country?: true
     state?: true
@@ -5387,11 +5357,6 @@ export namespace Prisma {
     longitude?: true
     bannerImageUrl?: true
     priceInr?: true
-    shareMode?: true
-    startTime?: true
-    endTime?: true
-    sqft?: true
-    dayOrNight?: true
     createdAt?: true
     updatedAt?: true
     rentedout?: true
@@ -5409,7 +5374,6 @@ export namespace Prisma {
     areaLocality?: true
     fullAddress?: true
     storeSize?: true
-    businessType?: true
     videoUrl?: true
     country?: true
     state?: true
@@ -5419,12 +5383,6 @@ export namespace Prisma {
     longitude?: true
     bannerImageUrl?: true
     priceInr?: true
-    shareMode?: true
-    startTime?: true
-    endTime?: true
-    days?: true
-    sqft?: true
-    dayOrNight?: true
     createdAt?: true
     updatedAt?: true
     rentedout?: true
@@ -5529,7 +5487,6 @@ export namespace Prisma {
     areaLocality: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl: string | null
     country: string | null
     state: string | null
@@ -5539,12 +5496,6 @@ export namespace Prisma {
     longitude: number | null
     bannerImageUrl: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime: string | null
-    endTime: string | null
-    days: string[]
-    sqft: number | null
-    dayOrNight: string | null
     createdAt: Date
     updatedAt: Date
     rentedout: boolean | null
@@ -5581,7 +5532,6 @@ export namespace Prisma {
     areaLocality?: boolean
     fullAddress?: boolean
     storeSize?: boolean
-    businessType?: boolean
     videoUrl?: boolean
     country?: boolean
     state?: boolean
@@ -5591,12 +5541,6 @@ export namespace Prisma {
     longitude?: boolean
     bannerImageUrl?: boolean
     priceInr?: boolean
-    shareMode?: boolean
-    startTime?: boolean
-    endTime?: boolean
-    days?: boolean
-    sqft?: boolean
-    dayOrNight?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     rentedout?: boolean
@@ -5621,7 +5565,6 @@ export namespace Prisma {
     areaLocality?: boolean
     fullAddress?: boolean
     storeSize?: boolean
-    businessType?: boolean
     videoUrl?: boolean
     country?: boolean
     state?: boolean
@@ -5631,12 +5574,6 @@ export namespace Prisma {
     longitude?: boolean
     bannerImageUrl?: boolean
     priceInr?: boolean
-    shareMode?: boolean
-    startTime?: boolean
-    endTime?: boolean
-    days?: boolean
-    sqft?: boolean
-    dayOrNight?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     rentedout?: boolean
@@ -5655,7 +5592,6 @@ export namespace Prisma {
     areaLocality?: boolean
     fullAddress?: boolean
     storeSize?: boolean
-    businessType?: boolean
     videoUrl?: boolean
     country?: boolean
     state?: boolean
@@ -5665,12 +5601,6 @@ export namespace Prisma {
     longitude?: boolean
     bannerImageUrl?: boolean
     priceInr?: boolean
-    shareMode?: boolean
-    startTime?: boolean
-    endTime?: boolean
-    days?: boolean
-    sqft?: boolean
-    dayOrNight?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     rentedout?: boolean
@@ -5689,7 +5619,6 @@ export namespace Prisma {
     areaLocality?: boolean
     fullAddress?: boolean
     storeSize?: boolean
-    businessType?: boolean
     videoUrl?: boolean
     country?: boolean
     state?: boolean
@@ -5699,18 +5628,12 @@ export namespace Prisma {
     longitude?: boolean
     bannerImageUrl?: boolean
     priceInr?: boolean
-    shareMode?: boolean
-    startTime?: boolean
-    endTime?: boolean
-    days?: boolean
-    sqft?: boolean
-    dayOrNight?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     rentedout?: boolean
   }
 
-  export type StoreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "ownerId" | "title" | "desc" | "peopleDesc" | "flatno" | "streetAddress" | "NearbyLandMark" | "areaLocality" | "fullAddress" | "storeSize" | "businessType" | "videoUrl" | "country" | "state" | "city" | "pin" | "latitude" | "longitude" | "bannerImageUrl" | "priceInr" | "shareMode" | "startTime" | "endTime" | "days" | "sqft" | "dayOrNight" | "createdAt" | "updatedAt" | "rentedout", ExtArgs["result"]["store"]>
+  export type StoreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "ownerId" | "title" | "desc" | "peopleDesc" | "flatno" | "streetAddress" | "NearbyLandMark" | "areaLocality" | "fullAddress" | "storeSize" | "videoUrl" | "country" | "state" | "city" | "pin" | "latitude" | "longitude" | "bannerImageUrl" | "priceInr" | "createdAt" | "updatedAt" | "rentedout", ExtArgs["result"]["store"]>
   export type StoreInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     owner?: boolean | UserDefaultArgs<ExtArgs>
     images?: boolean | Store$imagesArgs<ExtArgs>
@@ -5749,7 +5672,6 @@ export namespace Prisma {
       areaLocality: string | null
       fullAddress: string
       storeSize: string
-      businessType: string
       videoUrl: string | null
       country: string | null
       state: string | null
@@ -5759,12 +5681,6 @@ export namespace Prisma {
       longitude: number | null
       bannerImageUrl: string | null
       priceInr: number
-      shareMode: $Enums.ShareMode
-      startTime: string | null
-      endTime: string | null
-      days: string[]
-      sqft: number | null
-      dayOrNight: string | null
       createdAt: Date
       updatedAt: Date
       rentedout: boolean | null
@@ -6208,7 +6124,6 @@ export namespace Prisma {
     readonly areaLocality: FieldRef<"Store", 'String'>
     readonly fullAddress: FieldRef<"Store", 'String'>
     readonly storeSize: FieldRef<"Store", 'String'>
-    readonly businessType: FieldRef<"Store", 'String'>
     readonly videoUrl: FieldRef<"Store", 'String'>
     readonly country: FieldRef<"Store", 'String'>
     readonly state: FieldRef<"Store", 'String'>
@@ -6218,12 +6133,6 @@ export namespace Prisma {
     readonly longitude: FieldRef<"Store", 'Float'>
     readonly bannerImageUrl: FieldRef<"Store", 'String'>
     readonly priceInr: FieldRef<"Store", 'Int'>
-    readonly shareMode: FieldRef<"Store", 'ShareMode'>
-    readonly startTime: FieldRef<"Store", 'String'>
-    readonly endTime: FieldRef<"Store", 'String'>
-    readonly days: FieldRef<"Store", 'String[]'>
-    readonly sqft: FieldRef<"Store", 'Int'>
-    readonly dayOrNight: FieldRef<"Store", 'String'>
     readonly createdAt: FieldRef<"Store", 'DateTime'>
     readonly updatedAt: FieldRef<"Store", 'DateTime'>
     readonly rentedout: FieldRef<"Store", 'Boolean'>
@@ -24622,7 +24531,6 @@ export namespace Prisma {
     areaLocality: 'areaLocality',
     fullAddress: 'fullAddress',
     storeSize: 'storeSize',
-    businessType: 'businessType',
     videoUrl: 'videoUrl',
     country: 'country',
     state: 'state',
@@ -24632,12 +24540,6 @@ export namespace Prisma {
     longitude: 'longitude',
     bannerImageUrl: 'bannerImageUrl',
     priceInr: 'priceInr',
-    shareMode: 'shareMode',
-    startTime: 'startTime',
-    endTime: 'endTime',
-    days: 'days',
-    sqft: 'sqft',
-    dayOrNight: 'dayOrNight',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
     rentedout: 'rentedout'
@@ -25193,7 +25095,6 @@ export namespace Prisma {
     areaLocality?: StringNullableFilter<"Store"> | string | null
     fullAddress?: StringFilter<"Store"> | string
     storeSize?: StringFilter<"Store"> | string
-    businessType?: StringFilter<"Store"> | string
     videoUrl?: StringNullableFilter<"Store"> | string | null
     country?: StringNullableFilter<"Store"> | string | null
     state?: StringNullableFilter<"Store"> | string | null
@@ -25203,12 +25104,6 @@ export namespace Prisma {
     longitude?: FloatNullableFilter<"Store"> | number | null
     bannerImageUrl?: StringNullableFilter<"Store"> | string | null
     priceInr?: IntFilter<"Store"> | number
-    shareMode?: EnumShareModeFilter<"Store"> | $Enums.ShareMode
-    startTime?: StringNullableFilter<"Store"> | string | null
-    endTime?: StringNullableFilter<"Store"> | string | null
-    days?: StringNullableListFilter<"Store">
-    sqft?: IntNullableFilter<"Store"> | number | null
-    dayOrNight?: StringNullableFilter<"Store"> | string | null
     createdAt?: DateTimeFilter<"Store"> | Date | string
     updatedAt?: DateTimeFilter<"Store"> | Date | string
     rentedout?: BoolNullableFilter<"Store"> | boolean | null
@@ -25232,7 +25127,6 @@ export namespace Prisma {
     areaLocality?: SortOrderInput | SortOrder
     fullAddress?: SortOrder
     storeSize?: SortOrder
-    businessType?: SortOrder
     videoUrl?: SortOrderInput | SortOrder
     country?: SortOrderInput | SortOrder
     state?: SortOrderInput | SortOrder
@@ -25242,12 +25136,6 @@ export namespace Prisma {
     longitude?: SortOrderInput | SortOrder
     bannerImageUrl?: SortOrderInput | SortOrder
     priceInr?: SortOrder
-    shareMode?: SortOrder
-    startTime?: SortOrderInput | SortOrder
-    endTime?: SortOrderInput | SortOrder
-    days?: SortOrder
-    sqft?: SortOrderInput | SortOrder
-    dayOrNight?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     rentedout?: SortOrderInput | SortOrder
@@ -25274,7 +25162,6 @@ export namespace Prisma {
     areaLocality?: StringNullableFilter<"Store"> | string | null
     fullAddress?: StringFilter<"Store"> | string
     storeSize?: StringFilter<"Store"> | string
-    businessType?: StringFilter<"Store"> | string
     videoUrl?: StringNullableFilter<"Store"> | string | null
     country?: StringNullableFilter<"Store"> | string | null
     state?: StringNullableFilter<"Store"> | string | null
@@ -25284,12 +25171,6 @@ export namespace Prisma {
     longitude?: FloatNullableFilter<"Store"> | number | null
     bannerImageUrl?: StringNullableFilter<"Store"> | string | null
     priceInr?: IntFilter<"Store"> | number
-    shareMode?: EnumShareModeFilter<"Store"> | $Enums.ShareMode
-    startTime?: StringNullableFilter<"Store"> | string | null
-    endTime?: StringNullableFilter<"Store"> | string | null
-    days?: StringNullableListFilter<"Store">
-    sqft?: IntNullableFilter<"Store"> | number | null
-    dayOrNight?: StringNullableFilter<"Store"> | string | null
     createdAt?: DateTimeFilter<"Store"> | Date | string
     updatedAt?: DateTimeFilter<"Store"> | Date | string
     rentedout?: BoolNullableFilter<"Store"> | boolean | null
@@ -25313,7 +25194,6 @@ export namespace Prisma {
     areaLocality?: SortOrderInput | SortOrder
     fullAddress?: SortOrder
     storeSize?: SortOrder
-    businessType?: SortOrder
     videoUrl?: SortOrderInput | SortOrder
     country?: SortOrderInput | SortOrder
     state?: SortOrderInput | SortOrder
@@ -25323,12 +25203,6 @@ export namespace Prisma {
     longitude?: SortOrderInput | SortOrder
     bannerImageUrl?: SortOrderInput | SortOrder
     priceInr?: SortOrder
-    shareMode?: SortOrder
-    startTime?: SortOrderInput | SortOrder
-    endTime?: SortOrderInput | SortOrder
-    days?: SortOrder
-    sqft?: SortOrderInput | SortOrder
-    dayOrNight?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     rentedout?: SortOrderInput | SortOrder
@@ -25354,7 +25228,6 @@ export namespace Prisma {
     areaLocality?: StringNullableWithAggregatesFilter<"Store"> | string | null
     fullAddress?: StringWithAggregatesFilter<"Store"> | string
     storeSize?: StringWithAggregatesFilter<"Store"> | string
-    businessType?: StringWithAggregatesFilter<"Store"> | string
     videoUrl?: StringNullableWithAggregatesFilter<"Store"> | string | null
     country?: StringNullableWithAggregatesFilter<"Store"> | string | null
     state?: StringNullableWithAggregatesFilter<"Store"> | string | null
@@ -25364,12 +25237,6 @@ export namespace Prisma {
     longitude?: FloatNullableWithAggregatesFilter<"Store"> | number | null
     bannerImageUrl?: StringNullableWithAggregatesFilter<"Store"> | string | null
     priceInr?: IntWithAggregatesFilter<"Store"> | number
-    shareMode?: EnumShareModeWithAggregatesFilter<"Store"> | $Enums.ShareMode
-    startTime?: StringNullableWithAggregatesFilter<"Store"> | string | null
-    endTime?: StringNullableWithAggregatesFilter<"Store"> | string | null
-    days?: StringNullableListFilter<"Store">
-    sqft?: IntNullableWithAggregatesFilter<"Store"> | number | null
-    dayOrNight?: StringNullableWithAggregatesFilter<"Store"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Store"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Store"> | Date | string
     rentedout?: BoolNullableWithAggregatesFilter<"Store"> | boolean | null
@@ -26743,7 +26610,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -26753,12 +26619,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -26782,7 +26642,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -26792,12 +26651,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -26819,7 +26672,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -26829,12 +26681,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -26858,7 +26704,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -26868,12 +26713,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -26896,7 +26735,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -26906,12 +26744,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -26928,7 +26760,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -26938,12 +26769,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -26961,7 +26786,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -26971,12 +26795,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -28545,32 +28363,6 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type EnumShareModeFilter<$PrismaModel = never> = {
-    equals?: $Enums.ShareMode | EnumShareModeFieldRefInput<$PrismaModel>
-    in?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
-    notIn?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
-    not?: NestedEnumShareModeFilter<$PrismaModel> | $Enums.ShareMode
-  }
-
-  export type StringNullableListFilter<$PrismaModel = never> = {
-    equals?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    has?: string | StringFieldRefInput<$PrismaModel> | null
-    hasEvery?: string[] | ListStringFieldRefInput<$PrismaModel>
-    hasSome?: string[] | ListStringFieldRefInput<$PrismaModel>
-    isEmpty?: boolean
-  }
-
-  export type IntNullableFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
-  }
-
   export type BoolNullableFilter<$PrismaModel = never> = {
     equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
     not?: NestedBoolNullableFilter<$PrismaModel> | boolean | null
@@ -28603,7 +28395,6 @@ export namespace Prisma {
     areaLocality?: SortOrder
     fullAddress?: SortOrder
     storeSize?: SortOrder
-    businessType?: SortOrder
     videoUrl?: SortOrder
     country?: SortOrder
     state?: SortOrder
@@ -28613,12 +28404,6 @@ export namespace Prisma {
     longitude?: SortOrder
     bannerImageUrl?: SortOrder
     priceInr?: SortOrder
-    shareMode?: SortOrder
-    startTime?: SortOrder
-    endTime?: SortOrder
-    days?: SortOrder
-    sqft?: SortOrder
-    dayOrNight?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     rentedout?: SortOrder
@@ -28628,7 +28413,6 @@ export namespace Prisma {
     latitude?: SortOrder
     longitude?: SortOrder
     priceInr?: SortOrder
-    sqft?: SortOrder
   }
 
   export type StoreMaxOrderByAggregateInput = {
@@ -28643,7 +28427,6 @@ export namespace Prisma {
     areaLocality?: SortOrder
     fullAddress?: SortOrder
     storeSize?: SortOrder
-    businessType?: SortOrder
     videoUrl?: SortOrder
     country?: SortOrder
     state?: SortOrder
@@ -28653,11 +28436,6 @@ export namespace Prisma {
     longitude?: SortOrder
     bannerImageUrl?: SortOrder
     priceInr?: SortOrder
-    shareMode?: SortOrder
-    startTime?: SortOrder
-    endTime?: SortOrder
-    sqft?: SortOrder
-    dayOrNight?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     rentedout?: SortOrder
@@ -28675,7 +28453,6 @@ export namespace Prisma {
     areaLocality?: SortOrder
     fullAddress?: SortOrder
     storeSize?: SortOrder
-    businessType?: SortOrder
     videoUrl?: SortOrder
     country?: SortOrder
     state?: SortOrder
@@ -28685,11 +28462,6 @@ export namespace Prisma {
     longitude?: SortOrder
     bannerImageUrl?: SortOrder
     priceInr?: SortOrder
-    shareMode?: SortOrder
-    startTime?: SortOrder
-    endTime?: SortOrder
-    sqft?: SortOrder
-    dayOrNight?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     rentedout?: SortOrder
@@ -28699,7 +28471,6 @@ export namespace Prisma {
     latitude?: SortOrder
     longitude?: SortOrder
     priceInr?: SortOrder
-    sqft?: SortOrder
   }
 
   export type FloatNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -28734,17 +28505,23 @@ export namespace Prisma {
     _max?: NestedIntFilter<$PrismaModel>
   }
 
-  export type EnumShareModeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.ShareMode | EnumShareModeFieldRefInput<$PrismaModel>
-    in?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
-    notIn?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
-    not?: NestedEnumShareModeWithAggregatesFilter<$PrismaModel> | $Enums.ShareMode
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumShareModeFilter<$PrismaModel>
-    _max?: NestedEnumShareModeFilter<$PrismaModel>
+  export type BoolNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
+    not?: NestedBoolNullableWithAggregatesFilter<$PrismaModel> | boolean | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedBoolNullableFilter<$PrismaModel>
+    _max?: NestedBoolNullableFilter<$PrismaModel>
   }
 
-  export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
+  export type StringNullableListFilter<$PrismaModel = never> = {
+    equals?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    has?: string | StringFieldRefInput<$PrismaModel> | null
+    hasEvery?: string[] | ListStringFieldRefInput<$PrismaModel>
+    hasSome?: string[] | ListStringFieldRefInput<$PrismaModel>
+    isEmpty?: boolean
+  }
+
+  export type IntNullableFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null
     in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
     notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
@@ -28752,20 +28529,7 @@ export namespace Prisma {
     lte?: number | IntFieldRefInput<$PrismaModel>
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _avg?: NestedFloatNullableFilter<$PrismaModel>
-    _sum?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedIntNullableFilter<$PrismaModel>
-    _max?: NestedIntNullableFilter<$PrismaModel>
-  }
-
-  export type BoolNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
-    not?: NestedBoolNullableWithAggregatesFilter<$PrismaModel> | boolean | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedBoolNullableFilter<$PrismaModel>
-    _max?: NestedBoolNullableFilter<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
   export type CommunityImageListRelationFilter = {
@@ -28881,6 +28645,22 @@ export namespace Prisma {
     longitude?: SortOrder
     priceInr?: SortOrder
     sqft?: SortOrder
+  }
+
+  export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedIntNullableFilter<$PrismaModel>
+    _max?: NestedIntNullableFilter<$PrismaModel>
   }
 
   export type CommunityStoreScalarRelationFilter = {
@@ -29124,6 +28904,13 @@ export namespace Prisma {
     updatedAt?: SortOrder
   }
 
+  export type EnumShareModeFilter<$PrismaModel = never> = {
+    equals?: $Enums.ShareMode | EnumShareModeFieldRefInput<$PrismaModel>
+    in?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
+    not?: NestedEnumShareModeFilter<$PrismaModel> | $Enums.ShareMode
+  }
+
   export type AgreementCountOrderByAggregateInput = {
     id?: SortOrder
     userid?: SortOrder
@@ -29200,6 +28987,16 @@ export namespace Prisma {
 
   export type AgreementSumOrderByAggregateInput = {
     sqft?: SortOrder
+  }
+
+  export type EnumShareModeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.ShareMode | EnumShareModeFieldRefInput<$PrismaModel>
+    in?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
+    not?: NestedEnumShareModeWithAggregatesFilter<$PrismaModel> | $Enums.ShareMode
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumShareModeFilter<$PrismaModel>
+    _max?: NestedEnumShareModeFilter<$PrismaModel>
   }
 
   export type StoreAnlyalicCountOrderByAggregateInput = {
@@ -29893,10 +29690,6 @@ export namespace Prisma {
     deleteMany?: AppointmentNotifScalarWhereInput | AppointmentNotifScalarWhereInput[]
   }
 
-  export type StoreCreatedaysInput = {
-    set: string[]
-  }
-
   export type UserCreateNestedOneWithoutStoresInput = {
     create?: XOR<UserCreateWithoutStoresInput, UserUncheckedCreateWithoutStoresInput>
     connectOrCreate?: UserCreateOrConnectWithoutStoresInput
@@ -29983,23 +29776,6 @@ export namespace Prisma {
 
   export type IntFieldUpdateOperationsInput = {
     set?: number
-    increment?: number
-    decrement?: number
-    multiply?: number
-    divide?: number
-  }
-
-  export type EnumShareModeFieldUpdateOperationsInput = {
-    set?: $Enums.ShareMode
-  }
-
-  export type StoreUpdatedaysInput = {
-    set?: string[]
-    push?: string | string[]
-  }
-
-  export type NullableIntFieldUpdateOperationsInput = {
-    set?: number | null
     increment?: number
     decrement?: number
     multiply?: number
@@ -30179,6 +29955,14 @@ export namespace Prisma {
   export type CommunityStoreUpdatedaysInput = {
     set?: string[]
     push?: string | string[]
+  }
+
+  export type NullableIntFieldUpdateOperationsInput = {
+    set?: number | null
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
   }
 
   export type CommunityImageUpdateManyWithoutCommunitystoreNestedInput = {
@@ -30535,6 +30319,10 @@ export namespace Prisma {
     connect?: StoreWhereUniqueInput
   }
 
+  export type EnumShareModeFieldUpdateOperationsInput = {
+    set?: $Enums.ShareMode
+  }
+
   export type AgreementUpdatedaysInput = {
     set?: string[]
     push?: string | string[]
@@ -30791,13 +30579,6 @@ export namespace Prisma {
     not?: NestedFloatNullableFilter<$PrismaModel> | number | null
   }
 
-  export type NestedEnumShareModeFilter<$PrismaModel = never> = {
-    equals?: $Enums.ShareMode | EnumShareModeFieldRefInput<$PrismaModel>
-    in?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
-    notIn?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
-    not?: NestedEnumShareModeFilter<$PrismaModel> | $Enums.ShareMode
-  }
-
   export type NestedBoolNullableFilter<$PrismaModel = never> = {
     equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
     not?: NestedBoolNullableFilter<$PrismaModel> | boolean | null
@@ -30846,14 +30627,12 @@ export namespace Prisma {
     not?: NestedFloatFilter<$PrismaModel> | number
   }
 
-  export type NestedEnumShareModeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.ShareMode | EnumShareModeFieldRefInput<$PrismaModel>
-    in?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
-    notIn?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
-    not?: NestedEnumShareModeWithAggregatesFilter<$PrismaModel> | $Enums.ShareMode
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumShareModeFilter<$PrismaModel>
-    _max?: NestedEnumShareModeFilter<$PrismaModel>
+  export type NestedBoolNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
+    not?: NestedBoolNullableWithAggregatesFilter<$PrismaModel> | boolean | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedBoolNullableFilter<$PrismaModel>
+    _max?: NestedBoolNullableFilter<$PrismaModel>
   }
 
   export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -30872,12 +30651,21 @@ export namespace Prisma {
     _max?: NestedIntNullableFilter<$PrismaModel>
   }
 
-  export type NestedBoolNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
-    not?: NestedBoolNullableWithAggregatesFilter<$PrismaModel> | boolean | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedBoolNullableFilter<$PrismaModel>
-    _max?: NestedBoolNullableFilter<$PrismaModel>
+  export type NestedEnumShareModeFilter<$PrismaModel = never> = {
+    equals?: $Enums.ShareMode | EnumShareModeFieldRefInput<$PrismaModel>
+    in?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
+    not?: NestedEnumShareModeFilter<$PrismaModel> | $Enums.ShareMode
+  }
+
+  export type NestedEnumShareModeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.ShareMode | EnumShareModeFieldRefInput<$PrismaModel>
+    in?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
+    notIn?: $Enums.ShareMode[] | ListEnumShareModeFieldRefInput<$PrismaModel>
+    not?: NestedEnumShareModeWithAggregatesFilter<$PrismaModel> | $Enums.ShareMode
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumShareModeFilter<$PrismaModel>
+    _max?: NestedEnumShareModeFilter<$PrismaModel>
   }
   export type NestedJsonFilter<$PrismaModel = never> =
     | PatchUndefined<
@@ -30931,7 +30719,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -30941,12 +30728,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -30968,7 +30749,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -30978,12 +30758,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -31307,7 +31081,6 @@ export namespace Prisma {
     areaLocality?: StringNullableFilter<"Store"> | string | null
     fullAddress?: StringFilter<"Store"> | string
     storeSize?: StringFilter<"Store"> | string
-    businessType?: StringFilter<"Store"> | string
     videoUrl?: StringNullableFilter<"Store"> | string | null
     country?: StringNullableFilter<"Store"> | string | null
     state?: StringNullableFilter<"Store"> | string | null
@@ -31317,12 +31090,6 @@ export namespace Prisma {
     longitude?: FloatNullableFilter<"Store"> | number | null
     bannerImageUrl?: StringNullableFilter<"Store"> | string | null
     priceInr?: IntFilter<"Store"> | number
-    shareMode?: EnumShareModeFilter<"Store"> | $Enums.ShareMode
-    startTime?: StringNullableFilter<"Store"> | string | null
-    endTime?: StringNullableFilter<"Store"> | string | null
-    days?: StringNullableListFilter<"Store">
-    sqft?: IntNullableFilter<"Store"> | number | null
-    dayOrNight?: StringNullableFilter<"Store"> | string | null
     createdAt?: DateTimeFilter<"Store"> | Date | string
     updatedAt?: DateTimeFilter<"Store"> | Date | string
     rentedout?: BoolNullableFilter<"Store"> | boolean | null
@@ -32152,7 +31919,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -32162,12 +31928,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -32190,7 +31950,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -32200,12 +31959,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -32242,7 +31995,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -32252,12 +32004,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -32280,7 +32026,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -32290,12 +32035,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -32361,7 +32100,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -32371,12 +32109,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -32399,7 +32131,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -32409,12 +32140,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -32502,7 +32227,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -32512,12 +32236,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -32540,7 +32258,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -32550,12 +32267,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -32576,7 +32287,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -32586,12 +32296,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -32614,7 +32318,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -32624,12 +32327,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -32783,7 +32480,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -32793,12 +32489,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -32821,7 +32511,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -32831,12 +32520,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -33553,7 +33236,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -33563,12 +33245,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -33591,7 +33267,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -33601,12 +33276,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -33694,7 +33363,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -33704,12 +33372,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -33732,7 +33394,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -33742,12 +33403,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -33813,7 +33468,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -33823,12 +33477,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -33851,7 +33499,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -33861,12 +33508,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -33982,7 +33623,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -33992,12 +33632,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -34020,7 +33654,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -34030,12 +33663,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -34236,7 +33863,6 @@ export namespace Prisma {
     areaLocality?: string | null
     fullAddress: string
     storeSize: string
-    businessType: string
     videoUrl?: string | null
     country?: string | null
     state?: string | null
@@ -34246,12 +33872,6 @@ export namespace Prisma {
     longitude?: number | null
     bannerImageUrl?: string | null
     priceInr: number
-    shareMode: $Enums.ShareMode
-    startTime?: string | null
-    endTime?: string | null
-    days?: StoreCreatedaysInput | string[]
-    sqft?: number | null
-    dayOrNight?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     rentedout?: boolean | null
@@ -34355,7 +33975,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -34365,12 +33984,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -34392,7 +34005,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -34402,12 +34014,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null
@@ -34429,7 +34035,6 @@ export namespace Prisma {
     areaLocality?: NullableStringFieldUpdateOperationsInput | string | null
     fullAddress?: StringFieldUpdateOperationsInput | string
     storeSize?: StringFieldUpdateOperationsInput | string
-    businessType?: StringFieldUpdateOperationsInput | string
     videoUrl?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     state?: NullableStringFieldUpdateOperationsInput | string | null
@@ -34439,12 +34044,6 @@ export namespace Prisma {
     longitude?: NullableFloatFieldUpdateOperationsInput | number | null
     bannerImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     priceInr?: IntFieldUpdateOperationsInput | number
-    shareMode?: EnumShareModeFieldUpdateOperationsInput | $Enums.ShareMode
-    startTime?: NullableStringFieldUpdateOperationsInput | string | null
-    endTime?: NullableStringFieldUpdateOperationsInput | string | null
-    days?: StoreUpdatedaysInput | string[]
-    sqft?: NullableIntFieldUpdateOperationsInput | number | null
-    dayOrNight?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     rentedout?: NullableBoolFieldUpdateOperationsInput | boolean | null

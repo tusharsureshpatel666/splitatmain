@@ -88,10 +88,7 @@ const DashNav = () => {
         </Link> */}
 
         {/* Button 2 — Share Your Store */}
-        <Link
-          href={"/dashboard/communitystore/Addcommunitystore"}
-          className="md:flex hidden"
-        >
+        <Link href={"/dashboard/addstore"} className="md:flex hidden">
           <Button className="rounded-md lg:rounded-md cursor-pointer font-semibold flex items-center gap-2">
             <Plus className="w-5 h-5" />
             <span className="hidden lg:inline">List Your Store</span>

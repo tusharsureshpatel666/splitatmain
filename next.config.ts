@@ -9,7 +9,8 @@ const nextConfig: NextConfig = {
       "lh3.googleusercontent.com",
       "maps.googleapis.com",
       "maps.gstatic.com",
-      "plain-apac-prod-public.komododecks.com"
+      "plain-apac-prod-public.komododecks.com",
+      "images.unsplash.com"
     ], // allow Cloudinary images
   },
   productionBrowserSourceMaps: false,

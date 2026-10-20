@@ -41,7 +41,7 @@ const AddFormStore = () => {
   const [district, setDistrict] = useState("");
   const [city, setCity] = useState("");
   const [state, Sstate] = useState("");
-  const [address, setAddress] = useState("")
+  const [address, setAddress] = useState("");
 
   const [pin, setPin] = useState("");
 
@@ -68,27 +68,26 @@ const AddFormStore = () => {
   const isStepValid =
     (sStep === 1 && title.trim() !== "") ||
     (sStep === 2 && storeType.trim() !== "") ||
-    (sStep === 3 &&
-       address !=="") ||
+    (sStep === 3 && address !== "") ||
     (sStep === 4 &&
       bannerImage !== null &&
       otherImages.filter(Boolean).length === 4) ||
-    (sStep === 5 && share.mode !== "") ||
-    (sStep === 6 &&
-      ((share.mode === "HOURS_BY_HOURS" && share.startTime && share.endTime) ||
-        (share.mode === "DAYS_BY_DAYS" &&
-          Array.isArray(share.days) &&
-          share.days.length > 0) ||
-        (share.mode === "SPLIT_STORE" && share.sqft > 0) ||
-        (share.mode === "DAY_OR_NIGHT" &&
-          (share.dayOrNight === "Day" || share.dayOrNight === "Night")) ||
-        share.mode === "Weekend" ||
-        share.mode === "Regular")) ||
-    (sStep === 7 && Number(price) > 0) ||
-    (sStep === 8 && bussinessType !== "") ||
-    (sStep === 9 && desc !== "") ||
-    (sStep === 10 && peopleDesc !== "") ||
-    sStep > 11;
+    // (sStep === 5 && share.mode !== "") ||
+    // (sStep === 6 &&
+    //   ((share.mode === "HOURS_BY_HOURS" && share.startTime && share.endTime) ||
+    //     (share.mode === "DAYS_BY_DAYS" &&
+    //       Array.isArray(share.days) &&
+    //       share.days.length > 0) ||
+    //     (share.mode === "SPLIT_STORE" && share.sqft > 0) ||
+    //     (share.mode === "DAY_OR_NIGHT" &&
+    //       (share.dayOrNight === "Day" || share.dayOrNight === "Night")) ||
+    //     share.mode === "Weekend" ||
+    //     share.mode === "Regular")) ||
+    (sStep === 5 && Number(price) > 0) ||
+    // (sStep === 6 && bussinessType !== "") ||
+    (sStep === 6 && desc !== "") ||
+    (sStep === 7 && peopleDesc !== "") ||
+    sStep > 8;
 
   const handleNext = () => {
     if (!isStepValid) {
@@ -149,23 +148,22 @@ const AddFormStore = () => {
         state,
         address,
 
-
         pin,
 
         desc,
         priceInr: Number(price),
-        businessType: bussinessType,
+        // businessType: bussinessType,
         peopleDesc,
         bannerImageUrl: bannerUrl,
         images: imageUrls,
-        share: {
-          mode: share.mode,
-          startTime: share.startTime ?? null,
-          endTime: share.endTime ?? null,
-          days: share.days ?? [],
-          sqft: share.sqft ?? null,
-          dayOrNight: share.dayOrNight ?? null,
-        },
+        // share: {
+        //   mode: share.mode,
+        //   startTime: share.startTime ?? null,
+        //   endTime: share.endTime ?? null,
+        //   days: share.days ?? [],
+        //   sqft: share.sqft ?? null,
+        //   dayOrNight: share.dayOrNight ?? null,
+        // },
       };
 
       const res = await axios.post("/api/store/create", payload);
@@ -218,44 +216,10 @@ const AddFormStore = () => {
           setOtherImages={setOtherImages}
         />
       )}
-      {sStep == 5 && <StepPartic />}
-      {sStep == 6 && <StoreMethodtype />}
 
-      {sStep == 7 && <PriceInput price={price} setPrice={setPrice} />}
+      {sStep == 5 && <PriceInput price={price} setPrice={setPrice} />}
 
-      {sStep == 8 && (
-        <div className="space-y-8 justify-center flex flex-col items-center">
-          <Heading
-            title="Business Details"
-            description="What kind of business do you run?"
-            className="text-center"
-          />
-
-          <input
-            value={bussinessType}
-            onChange={(e) => setBussinessType(e.target.value)}
-            placeholder="Business type"
-            className="
-      w-full max-w-xl
-      text-5xl font-semibold text-center
-      bg-transparent
-      border-none outline-none
-      placeholder:text-gray-400
-      caret-black dark:caret-white
-      dark:text-white
-      focus:ring-0
-    "
-          />
-
-          {/* Helper text like Airbnb */}
-          <p className="text-sm text-gray-500 dark:text-gray-400 text-center max-w-md">
-            Example keywords: Barber, Bakery, Yoga Studio, Gaming Café,
-            Restaurant, Gym, Salon, Coaching Center
-          </p>
-        </div>
-      )}
-
-      {sStep == 9 && (
+      {sStep == 6 && (
         <StepDesc
           bussinesstype={bussinessType}
           description={desc}
@@ -263,7 +227,7 @@ const AddFormStore = () => {
         />
       )}
 
-      {sStep == 10 && (
+      {sStep == 7 && (
         <PeopleDesc
           bussinesstype={bussinessType}
           partnerDescription={peopleDesc}
@@ -271,7 +235,7 @@ const AddFormStore = () => {
         />
       )}
 
-      {sStep == 11 && (
+      {sStep == 8 && (
         <div className="text-center space-y-6 flex flex-col items-center justify-center">
           {/* Large Responsive Image */}
           <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">

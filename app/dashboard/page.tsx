@@ -16,7 +16,9 @@ export default function Dashboard() {
 
       {/* Custom Tab Bar */}
 
-      <ListedStoreComm />
+      <ListedStore />
+
+      {/* <ListedStoreComm /> */}
     </div>
   );
 }

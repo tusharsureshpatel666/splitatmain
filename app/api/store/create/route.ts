@@ -34,13 +34,11 @@ export async function POST(req: Request) {
       pin,
       address,
 
-      businessType,
       peopleDesc,
       storeSize,
       priceInr,
       bannerImageUrl,
       images,
-      share,
     } = body;
 
     const { lat, lng } = await getLatLng({
@@ -52,7 +50,7 @@ export async function POST(req: Request) {
       state,
       pin,
       country,
-     address,
+      address,
     });
 
     const total = priceInr * 1.1;
@@ -85,13 +83,6 @@ export async function POST(req: Request) {
       );
     }
 
-    if (!share || !share.mode) {
-      return NextResponse.json(
-        { error: "Share data missing" },
-        { status: 400 },
-      );
-    }
-
     /* ----------------------------- */
     /* 4. Create Store */
     /* ----------------------------- */
@@ -102,12 +93,12 @@ export async function POST(req: Request) {
         desc,
         peopleDesc,
         storeSize,
-        businessType,
+
         country,
         state,
         city,
         pin,
-       fullAddress: address,
+        fullAddress: address,
         flatno: flat,
         streetAddress: street,
         NearbyLandMark: nearby,
@@ -117,13 +108,6 @@ export async function POST(req: Request) {
 
         priceInr: total,
         bannerImageUrl,
-
-        shareMode: share.mode,
-        startTime: share.startTime,
-        endTime: share.endTime,
-        days: share.days ?? [],
-        sqft: share.sqft,
-        dayOrNight: share.dayOrNight,
 
         images: {
           createMany: {

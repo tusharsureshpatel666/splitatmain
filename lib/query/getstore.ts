@@ -18,16 +18,11 @@ export async function getStoreById(id: string) {
       state: true,
       city: true,
       pin: true,
-      shareMode: true,
-      startTime: true,
-      endTime: true,
-      sqft: true,
-      days: true,
-      dayOrNight: true,
+
       storeSize: true,
 
       priceInr: true,
-      businessType: true,
+
       bannerImageUrl: true,
       latitude: true,
       longitude: true,

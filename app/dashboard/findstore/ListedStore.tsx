@@ -14,7 +14,6 @@ const STORES_CARD_QUERY = gql`
       title
       bannerImageUrl
       priceInr
-      shareMode
     }
   }
 `;
@@ -24,7 +23,6 @@ type Store = {
   title: string;
   bannerImageUrl?: string | null;
   priceInr: number;
-  shareMode?: string | null;
 };
 
 const formatShareMode = (mode?: string | null) => {
@@ -112,11 +110,11 @@ export default function ListedStore() {
                 {/* Guest Favourite Badge */}
 
                 {/* Share Type Badge */}
-                {item.shareMode && (
+                {/* {item.shareMode && (
                   <div className="absolute top-2 left-2 bg-black/70 text-white px-3 py-1 rounded-md text-xs font-medium">
                     {formatShareMode(item.shareMode)}
                   </div>
-                )}
+                )} */}
 
                 {/* Heart Icon */}
               </div>

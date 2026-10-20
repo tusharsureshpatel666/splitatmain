@@ -38,6 +38,7 @@ model User {
 
   stores        Store[]      @relation("OwerStores")
   likedStores   StoreLike[]
+  
   notification Notification[]
   userBussinessType String?
 
@@ -95,7 +96,7 @@ model Store {
 
 
   storeSize       String
-  businessType    String
+  
   videoUrl        String?
 
   country         String?
@@ -112,12 +113,7 @@ model Store {
 
   priceInr        Int
 
-  shareMode       ShareMode
-  startTime       String?
-  endTime         String?
-  days            String[]
-  sqft            Int?
-  dayOrNight      String?
+  
 
   likes           StoreLike[]
 
@@ -142,6 +138,7 @@ model CommunityStore {
    videoUrl        String?
 
     flatno         String?
+    
   streetAddress String?
   NearbyLandMark  String?
   areaLocality String?
@@ -220,6 +217,7 @@ model StoreLike {
   @@unique([userId, storeId])
   @@index([storeId])
 }
+
 model Conversation {
   id String @id @default(uuid())
 

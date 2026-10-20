@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactPage from "../(landing)/common/contact/Contact";
+import PropertyDetailsPage from "../dashboard/store/[id]/components/property";
 
 export const metadata: Metadata = {
   title: "Contact Splitat | Store Sharing Platform in India",
@@ -22,5 +23,5 @@ export const metadata: Metadata = {
 };
 
 export default function page() {
-  return <ContactPage />;
+  return <PropertyDetailsPage />;
 }
