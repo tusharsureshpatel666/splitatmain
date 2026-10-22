@@ -45,7 +45,7 @@ export default function HowItWorks() {
             className="group rounded-[22px] border border-black/[.08] bg-white p-6 transition duration-300 hover:-translate-y-1 hover:shadow-soft sm:p-8"
           >
             <div className="flex items-start justify-between">
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-black transition group-hover:bg-purple-500">
+              <span className="grid h-12 w-12 place-items-center rounded-2xl text-white bg-black transition group-hover:bg-purple-500">
                 <Icon size={21} strokeWidth={1.6} />
               </span>
               <span className="text-xs font-semibold tracking-widest text-neutral-800">

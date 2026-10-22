@@ -48,7 +48,7 @@ export default function FeaturedSpaces() {
           />
           <Link
             href="#get-started"
-            className="inline-flex w-fit items-center gap-2 rounded-full border border-black/15 bg-black px-5 py-3 text-xs font-semibold transition hover:bg-lime"
+            className="inline-flex w-fit items-center gap-2 rounded-full border border-black/15 text-white bg-black px-5 py-3 text-xs font-semibold transition hover:bg-lime"
           >
             Explore all spaces <ArrowUpRight size={14} />
           </Link>

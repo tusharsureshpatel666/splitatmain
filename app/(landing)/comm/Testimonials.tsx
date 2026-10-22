@@ -27,7 +27,7 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-ink py-20 text-white sm:py-28">
+    <section className="bg-gray-50 dark:bg-black py-20 text-gray-900 transition-colors duration-300 dark:bg-ink dark:text-white sm:py-28">
       <div className="container-shell">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading
@@ -35,35 +35,42 @@ export default function Testimonials() {
             title="Built around real business needs."
             description="Flexible space is not just about square footage. It is about what you can do with it."
           />
-          <div className="flex items-center gap-2 text-xs text-white/60">
-            <span className="flex gap-0.5 text-lime">
+
+          <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-white/60">
+            <span className="flex gap-0.5 text-yellow-500">
               {[1, 2, 3, 4, 5].map((n) => (
-                <Star key={n} size={13} fill="yellow" />
+                <Star key={n} size={13} fill="currentColor" />
               ))}
-            </span>{" "}
+            </span>
             Designed for better workdays
           </div>
         </div>
+
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {reviews.map((review) => (
             <article
               key={review.name}
-              className="rounded-[22px] border border-white/10 bg-white/[.045] p-6 transition hover:bg-white/[.075] sm:p-7"
+              className="rounded-[22px] border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:border-purple-200 hover:shadow-md dark:border-white/10 dark:bg-white/[.045] dark:shadow-none dark:hover:bg-white/[.075] dark:hover:border-white/20 sm:p-7"
             >
-              <Quote size={22} className="text-purple-300" />
-              <p className="mt-5 min-h-[120px] text-[14px] leading-7 text-white/80">
+              <Quote
+                size={22}
+                className="text-purple-600 dark:text-purple-300"
+              />
+
+              <p className="mt-5 min-h-[120px] text-[14px] leading-7 text-gray-600 dark:text-white/80">
                 &ldquo;{review.quote}&rdquo;
               </p>
-              <div className="mt-7 flex items-center gap-3 border-t border-white/10 pt-5">
-                <div
-                  className="grid h-10 w-10 place-items-center rounded-full bg-purple-400
-                 text-xs font-bold text-ink"
-                >
+
+              <div className="mt-7 flex items-center gap-3 border-t border-gray-200 pt-5 dark:border-white/10">
+                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-purple-100 text-xs font-bold text-purple-800 dark:bg-purple-400 dark:text-ink">
                   {review.initials}
                 </div>
+
                 <div>
-                  <p className="text-xs font-semibold">{review.name}</p>
-                  <p className="mt-1 text-[10px] text-white/45">
+                  <p className="text-xs font-semibold text-gray-900 dark:text-white">
+                    {review.name}
+                  </p>
+                  <p className="mt-1 text-[10px] text-gray-500 dark:text-white/45">
                     {review.role}
                   </p>
                 </div>
@@ -71,7 +78,8 @@ export default function Testimonials() {
             </article>
           ))}
         </div>
-        <p className="mt-5 text-[10px] text-white/40">
+
+        <p className="mt-5 text-[10px] text-gray-400 dark:text-white/40">
           Illustrative testimonials for layout preview. Replace with genuine
           customer reviews before launch.
         </p>

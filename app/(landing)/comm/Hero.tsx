@@ -36,13 +36,13 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href="#spaces"
+              href="/dashboard"
               className="inline-flex items-center gap-3 rounded-full bg-purple-500 px-6 py-4 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-purple-700"
             >
               Explore spaces <ArrowUpRight size={16} />
             </Link>
             <Link
-              href="#owners"
+              href="/dashboard"
               className="inline-flex items-center gap-2 rounded-full border border-gray-400  px-6 py-4 text-sm font-semibold transition hover:bg-gray05"
             >
               List your space <ArrowDownRight size={16} />
@@ -94,9 +94,9 @@ export default function Hero() {
                     From
                   </p>
                   <p className="text-base font-bold text-black ">
-                    ₹800
+                    ₹8000
                     <span className="text-[10px] text-black  font-medium">
-                      /day
+                      /month
                     </span>
                   </p>
                 </div>

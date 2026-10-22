@@ -2987,7 +2987,7 @@ export namespace Prisma {
     phone: string | null
     phoneVerified: boolean
     createdAt: Date
-    userBussinessType: string
+    userBussinessType: string | null
     _count: UserCountAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
     _max: UserMaxAggregateOutputType | null
@@ -3101,7 +3101,7 @@ export namespace Prisma {
       phone: string | null
       phoneVerified: boolean
       createdAt: Date
-      userBussinessType: string
+      userBussinessType: string | null
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -3766,7 +3766,7 @@ export namespace Prisma {
     /**
      * The data needed to create a User.
      */
-    data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    data?: XOR<UserCreateInput, UserUncheckedCreateInput>
   }
 
   /**
@@ -24942,7 +24942,7 @@ export namespace Prisma {
     phone?: StringNullableFilter<"User"> | string | null
     phoneVerified?: BoolFilter<"User"> | boolean
     createdAt?: DateTimeFilter<"User"> | Date | string
-    userBussinessType?: StringFilter<"User"> | string
+    userBussinessType?: StringNullableFilter<"User"> | string | null
     stores?: StoreListRelationFilter
     likedStores?: StoreLikeListRelationFilter
     notification?: NotificationListRelationFilter
@@ -24963,7 +24963,7 @@ export namespace Prisma {
     phone?: SortOrderInput | SortOrder
     phoneVerified?: SortOrder
     createdAt?: SortOrder
-    userBussinessType?: SortOrder
+    userBussinessType?: SortOrderInput | SortOrder
     stores?: StoreOrderByRelationAggregateInput
     likedStores?: StoreLikeOrderByRelationAggregateInput
     notification?: NotificationOrderByRelationAggregateInput
@@ -24987,7 +24987,7 @@ export namespace Prisma {
     image?: StringNullableFilter<"User"> | string | null
     phoneVerified?: BoolFilter<"User"> | boolean
     createdAt?: DateTimeFilter<"User"> | Date | string
-    userBussinessType?: StringFilter<"User"> | string
+    userBussinessType?: StringNullableFilter<"User"> | string | null
     stores?: StoreListRelationFilter
     likedStores?: StoreLikeListRelationFilter
     notification?: NotificationListRelationFilter
@@ -25008,7 +25008,7 @@ export namespace Prisma {
     phone?: SortOrderInput | SortOrder
     phoneVerified?: SortOrder
     createdAt?: SortOrder
-    userBussinessType?: SortOrder
+    userBussinessType?: SortOrderInput | SortOrder
     _count?: UserCountOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
     _min?: UserMinOrderByAggregateInput
@@ -25025,7 +25025,7 @@ export namespace Prisma {
     phone?: StringNullableWithAggregatesFilter<"User"> | string | null
     phoneVerified?: BoolWithAggregatesFilter<"User"> | boolean
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
-    userBussinessType?: StringWithAggregatesFilter<"User"> | string
+    userBussinessType?: StringNullableWithAggregatesFilter<"User"> | string | null
   }
 
   export type OtpWhereInput = {
@@ -26434,7 +26434,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     notification?: NotificationCreateNestedManyWithoutUserInput
@@ -26455,7 +26455,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
@@ -26476,7 +26476,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
@@ -26497,7 +26497,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput
@@ -26518,7 +26518,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
   }
 
   export type UserUpdateManyMutationInput = {
@@ -26529,7 +26529,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateManyInput = {
@@ -26540,7 +26540,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type OtpCreateInput = {
@@ -31370,7 +31370,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     notification?: NotificationCreateNestedManyWithoutUserInput
     messages?: MessageCreateNestedManyWithoutSenderInput
@@ -31390,7 +31390,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
     messages?: MessageUncheckedCreateNestedManyWithoutSenderInput
@@ -31594,7 +31594,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
     messages?: MessageUpdateManyWithoutSenderNestedInput
@@ -31614,7 +31614,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput
     messages?: MessageUncheckedUpdateManyWithoutSenderNestedInput
@@ -32052,7 +32052,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     notification?: NotificationCreateNestedManyWithoutUserInput
     messages?: MessageCreateNestedManyWithoutSenderInput
@@ -32072,7 +32072,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
     messages?: MessageUncheckedCreateNestedManyWithoutSenderInput
@@ -32173,7 +32173,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
     messages?: MessageUpdateManyWithoutSenderNestedInput
@@ -32193,7 +32193,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput
     messages?: MessageUncheckedUpdateManyWithoutSenderNestedInput
@@ -32349,7 +32349,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     notification?: NotificationCreateNestedManyWithoutUserInput
@@ -32369,7 +32369,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
@@ -32548,7 +32548,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
@@ -32568,7 +32568,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput
@@ -32661,7 +32661,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     notification?: NotificationCreateNestedManyWithoutUserInput
@@ -32681,7 +32681,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
@@ -32748,7 +32748,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
@@ -32768,7 +32768,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput
@@ -32788,7 +32788,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     messages?: MessageCreateNestedManyWithoutSenderInput
@@ -32808,7 +32808,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     messages?: MessageUncheckedCreateNestedManyWithoutSenderInput
@@ -32869,7 +32869,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     messages?: MessageUpdateManyWithoutSenderNestedInput
@@ -32889,7 +32889,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     messages?: MessageUncheckedUpdateManyWithoutSenderNestedInput
@@ -32940,7 +32940,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     notification?: NotificationCreateNestedManyWithoutUserInput
@@ -32960,7 +32960,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
@@ -32996,7 +32996,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
@@ -33016,7 +33016,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput
@@ -33036,7 +33036,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     notification?: NotificationCreateNestedManyWithoutUserInput
@@ -33056,7 +33056,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
@@ -33117,7 +33117,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
@@ -33137,7 +33137,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput
@@ -33188,7 +33188,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     notification?: NotificationCreateNestedManyWithoutUserInput
@@ -33208,7 +33208,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
@@ -33309,7 +33309,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
@@ -33329,7 +33329,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput
@@ -33420,7 +33420,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     notification?: NotificationCreateNestedManyWithoutUserInput
@@ -33440,7 +33440,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
@@ -33569,7 +33569,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
@@ -33589,7 +33589,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput
@@ -33727,7 +33727,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeCreateNestedManyWithoutUserInput
     notification?: NotificationCreateNestedManyWithoutUserInput
@@ -33747,7 +33747,7 @@ export namespace Prisma {
     phone?: string | null
     phoneVerified?: boolean
     createdAt?: Date | string
-    userBussinessType: string
+    userBussinessType?: string | null
     stores?: StoreUncheckedCreateNestedManyWithoutOwnerInput
     likedStores?: StoreLikeUncheckedCreateNestedManyWithoutUserInput
     notification?: NotificationUncheckedCreateNestedManyWithoutUserInput
@@ -33820,7 +33820,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUpdateManyWithoutUserNestedInput
     notification?: NotificationUpdateManyWithoutUserNestedInput
@@ -33840,7 +33840,7 @@ export namespace Prisma {
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     phoneVerified?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    userBussinessType?: StringFieldUpdateOperationsInput | string
+    userBussinessType?: NullableStringFieldUpdateOperationsInput | string | null
     stores?: StoreUncheckedUpdateManyWithoutOwnerNestedInput
     likedStores?: StoreLikeUncheckedUpdateManyWithoutUserNestedInput
     notification?: NotificationUncheckedUpdateManyWithoutUserNestedInput

@@ -25,6 +25,7 @@ import Link from "next/link";
 import { ChartBar } from "lucide-react";
 import { FaChartArea } from "react-icons/fa";
 import StoreDescription from "./components/storedesc";
+import PeopleDesc from "./components/peopleDesc";
 
 interface StorePageProps {
   params: {
@@ -137,20 +138,13 @@ export default async function StorePage({ params }: StorePageProps) {
 
           {/* Store sharing method */}
           <section className="space-y-5">
-            <div className="space-y-1.5">
-              <div className="flex items-center gap-2">
-                <h2 className="text-xl font-semibold tracking-tight text-gray-950 dark:text-white sm:text-2xl">
-                  Store Desc
-                </h2>
-              </div>
-
-              <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
-                Explore how this space can work around your business.
-              </p>
-            </div>
-
             <div className="">
               <StoreDescription description={store?.desc} />
+            </div>
+          </section>
+          <section className="space-y-5">
+            <div className="">
+              <PeopleDesc peopleDesc={store?.peopleDesc} />
             </div>
           </section>
         </div>

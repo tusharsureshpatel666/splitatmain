@@ -9,7 +9,7 @@ export default function FinalCTA() {
         <div className="absolute -right-2 -top-16 h-60 w-60 rounded-full border border-black/10" />
         <div className="relative z-10 max-w-2xl">
           <p className="eyebrow text-white">Make your next move</p>
-          <h2 className="mt-4 text-4xl font-semibold leading-[.98] tracking-[-.07em] sm:text-6xl">
+          <h2 className="mt-4 text-4xl text-white font-semibold leading-[.98] tracking-[-.07em] sm:text-6xl">
             Space for your
             <br />
             next big thing.
@@ -26,7 +26,7 @@ export default function FinalCTA() {
             </Link>
             <Link
               href="#owners"
-              className="inline-flex items-center gap-2 rounded-full border border-black/20 px-5 py-3.5 text-xs font-semibold transition hover:bg-black/5"
+              className="inline-flex items-center gap-2 rounded-full border text-white border-black/20 px-5 py-3.5 text-xs font-semibold transition hover:bg-black/5"
             >
               I have a space <MoveUpRight size={15} />
             </Link>

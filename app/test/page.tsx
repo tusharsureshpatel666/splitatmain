@@ -6,10 +6,10 @@ import TrueVideo from "../dashboard/addstore/components/form-steps/trueVideo";
 
 const Textpage = () => {
   const [desc, setDescription] = useState("");
-  const [address, setAddress] = useState("")
+  const [address, setAddress] = useState("");
 
   return (
-    <div className="px-6">
+    <div className="px-6 max-w-7xl">
       {/* <StepDesc
         bussinesstype={"cafe"}
         description={desc}

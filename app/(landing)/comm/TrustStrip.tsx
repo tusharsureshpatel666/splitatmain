@@ -14,7 +14,7 @@ export default function TrustStrip() {
             key={item.label}
             className="px-4 py-6 first:pl-0 sm:px-7 sm:py-7"
           >
-            <p className="text-2xl font-semibold tracking-[-.06em] sm:text-3xl">
+            <p className="text-2xl font-semibold text-white tracking-[-.06em] sm:text-3xl">
               {item.value}
             </p>
             <p className="mt-1.5 text-[11px] text-white sm:text-xs">
